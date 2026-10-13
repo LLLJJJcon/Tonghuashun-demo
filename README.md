@@ -4,8 +4,7 @@
 
 | | |
 |---|---|
-| 在线体验（主站） | 【待填：主站 URL】（部署在 Vercel，使用自定义域名） |
-| 在线体验（备用） | 【待填：备用站 URL】（Vercel 默认域名；中国大陆网络实测记录见 [docs/deploy-and-smoke.md](docs/deploy-and-smoke.md)） |
+| 在线体验 | **https://eventtrace-demo.vercel.app** （部署在 Vercel 免费版，公开访问，无需登录） |
 | 演示视频 | 【待填：视频链接】（约 150 秒） |
 | 代码仓库 | 【待填：仓库地址】 |
 
@@ -401,6 +400,14 @@ npm run dev        # 本地开发
 npm run test       # 规则引擎单元测试
 npm run build      # 构建前会自动执行数据和安全检查，产物在 dist/
 ```
+
+部署（Vercel 命令行，发布到固定的正式地址）：
+
+```bash
+npx vercel@63.1.0 deploy --prod --yes
+```
+
+> 每次发布还会生成带随机后缀的预览地址，这类地址开启了访问保护，**不用于提交**；对外只使用 `eventtrace-demo.vercel.app`。
 
 ```
 ├─ README.md
