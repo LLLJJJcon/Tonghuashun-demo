@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | 在线体验 | **https://eventtrace-demo.vercel.app** （部署在 Vercel 免费版，公开访问，无需登录） |
-| 演示视频 | [点击播放（82 秒，mp4）](https://github.com/LLLJJJcon/Tonghuashun-demo/blob/main/docs/video/eventtrace-demo.mp4)，文件位于仓库 [docs/video/eventtrace-demo.mp4](docs/video/eventtrace-demo.mp4) |
+| 演示视频 | [▶ 在线播放（82 秒）](https://eventtrace-demo.vercel.app/video/eventtrace-demo.mp4)，视频文件在仓库 [public/video/eventtrace-demo.mp4](public/video/eventtrace-demo.mp4) |
 | 代码仓库 | https://github.com/LLLJJJcon/Tonghuashun-demo |
 
 > **说明**：这是一个面试前的能力测试 demo，**运行时不调用任何 AI 或外部接口**。AI 结果在数据准备阶段基于真实材料生成，原因见 [5.4 节](#54-为什么运行时不提供在线-ai)。**这些 AI 结果没有经过人工校验**，只做了一次独立 AI 交叉复核（见 [5.3 节](#53-独立-ai-交叉复核一致率)）。本产品内容不构成任何投资建议。
@@ -428,7 +428,7 @@ npx vercel@63.1.0 deploy --prod --yes
 |---|---|
 | Web 产品 URL | 见本文开头 |
 | 源代码仓库与 README | 本仓库 |
-| 演示视频（60–180 秒） | [docs/video/eventtrace-demo.mp4](https://github.com/LLLJJJcon/Tonghuashun-demo/blob/main/docs/video/eventtrace-demo.mp4)（82 秒）；脚本见 [docs/demo-video-script.md](docs/demo-video-script.md) |
+| 演示视频（60–180 秒） | [在线播放](https://eventtrace-demo.vercel.app/video/eventtrace-demo.mp4)（82 秒，文件见 `public/video/eventtrace-demo.mp4`）；脚本见 [docs/demo-video-script.md](docs/demo-video-script.md) |
 | AI 使用与验证记录 | [docs/ai-usage-and-validation.md](docs/ai-usage-and-validation.md) |
 | 测试说明 | [docs/test-plan.md](docs/test-plan.md) |
 | 部署与冒烟测试记录 | [docs/deploy-and-smoke.md](docs/deploy-and-smoke.md) |
