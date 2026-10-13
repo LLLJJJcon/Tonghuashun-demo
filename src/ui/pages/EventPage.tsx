@@ -309,6 +309,7 @@ function TriggerLink({
 }) {
   const { state } = useApp();
   const t = v.trigger;
+  if (t.kind === 'decay') return <span className="small muted">触发：时效衰减</span>;
   if (t.kind === 'document') {
     const d = ev.documents.find((x) => x.id === t.ref_id);
     return (

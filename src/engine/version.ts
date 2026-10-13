@@ -45,7 +45,7 @@ type Trigger =
   | { kind: 'document'; doc: Document }
   | { kind: 'expiry'; claimId: string }
   | { kind: 'review'; review: ReviewEntry }
-  | { kind: 'decay'; doc: Document };
+  | { kind: 'decay' };
 
 /**
  * 依次遍历 ≤ E 的检查点，每个检查点先算 pre（复核只取 demo_time < c），
@@ -120,9 +120,10 @@ export function buildTimeline(ctx: Ctx, event: EventDef, checkpoints: { iso: str
     if (trigger.kind === 'document' && (before?.status ?? null) !== snap.status) statusDocIds.add(trigger.doc.id);
     versions.push({
       id: `${event.id}_v${no}`, event_id: event.id, no, at,
-      trigger: trigger.kind === 'document' || trigger.kind === 'decay'
-        ? { kind: 'document', ref_id: trigger.doc.id }
-        : trigger.kind === 'expiry' ? { kind: 'expiry', ref_id: trigger.claimId } : { kind: 'review', ref_id: trigger.review.id },
+      trigger: trigger.kind === 'document' ? { kind: 'document', ref_id: trigger.doc.id }
+        : trigger.kind === 'expiry' ? { kind: 'expiry', ref_id: trigger.claimId }
+        : trigger.kind === 'review' ? { kind: 'review', ref_id: trigger.review.id }
+        : { kind: 'decay', ref_id: event.id },
       status_before: before?.status ?? null, status_after: snap.status,
       field_changes, new_conflict_ids, is_human_correction: human, text,
     });
@@ -149,10 +150,7 @@ export function buildTimeline(ctx: Ctx, event: EventDef, checkpoints: { iso: str
           const between = pre.filter((r) => r.demoMs > prevMs);
           if (expiring.length) trigger = { kind: 'expiry', claimId: expiring[0].id };
           else if (between.length) trigger = { kind: 'review', review: between[between.length - 1].entry };
-          else {
-            const last = [...released].sort((a, b) => toMs(b.fetched_at) - toMs(a.fetched_at) || docOrder(b, a))[0];
-            trigger = { kind: 'decay', doc: last };
-          }
+          else trigger = { kind: 'decay' };
         }
         emit(cp.iso, trigger, state);
       }

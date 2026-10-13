@@ -62,6 +62,19 @@ describe('边界', () => {
     expect(claimView(out, 'doc_A01_c1').weight).toBe(0);
   });
 
+  it('材料标为噪声后，其下主张的复核条目也视为已处理', () => {
+    const T = fetched('A04');
+    expect(run(T).review_queue.map((r) => r.id)).toContain('rq_doc_A04_c1');
+    const r = review({ id: 'rv_doc', target: { kind: 'document', id: 'doc_A04' }, action: 'mark_noise', demo_time: T });
+    const out = run(T, [r]);
+    expect(out.review_queue.map((x) => x.id)).not.toContain('rq_doc_A04_c1');
+    expect(ev(out, 'evt_A').review_items.map((x) => x.id)).not.toContain('rq_doc_A04_c1');
+    expect(claimView(out, 'doc_A04_c1').excluded_reason).toBe('noise');
+    // demo_time 晚于 T 的噪声标记不生效
+    expect(run(fetched('A02'), [{ ...r, demo_time: fetched('A05') }]).review_queue).toEqual(run(fetched('A02')).review_queue);
+    expect(run(T, [{ ...r, demo_time: fetched('A05') }]).review_queue.map((x) => x.id)).toContain('rq_doc_A04_c1');
+  });
+
   it('关注列表只过滤通知', () => {
     const all = run(LATEST);
     const only = run(LATEST, [], { watchlist: ['DEV003.SH'] });
@@ -117,7 +130,7 @@ describe('边界', () => {
     expect(out.events).toEqual(run(fetched('A04')).events);
   });
 
-  it('附录 B 未覆盖：仅因时效衰减导致的状态变化也生成版本（触发记为本事件最新材料）', () => {
+  it('仅因时效衰减导致的状态变化也生成版本（trigger.kind = decay，ref_id 为事件 ID）', () => {
     const data = input(null);
     const noDenial = { ...data, documents: data.documents.filter((d) => d.id !== 'doc_A05'), claims: data.claims.filter((c) => c.id !== 'doc_A05_c1') };
     const out = derive({ ...noDenial, clock: LATEST });
@@ -126,7 +139,8 @@ describe('边界', () => {
     const v = a.versions[a.versions.length - 1];
     expect(v.status_before).toBe('partially_confirmed');
     expect(v.status_after).toBe('unverified');
-    expect(v.trigger).toEqual({ kind: 'document', ref_id: 'doc_A04' });
+    expect(v.trigger).toEqual({ kind: 'decay', ref_id: 'evt_A' });
+    expect(v.is_human_correction).toBe(false);
     expect(v.text).toContain('时效衰减');
     expect(a.versions.at(-1)!.at).not.toBe(fetched('A04'));
   });

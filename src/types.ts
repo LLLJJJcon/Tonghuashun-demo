@@ -211,7 +211,7 @@ export interface Version {
   id: string;                         // `${event_id}_v${no}`
   event_id: string; no: number;
   at: string;                         // 演示时间
-  trigger: { kind: 'document' | 'expiry' | 'review'; ref_id: string };
+  trigger: { kind: 'document' | 'expiry' | 'review' | 'decay'; ref_id: string };  // decay：仅因时效衰减导致状态变化，ref_id 为事件 ID
   status_before: EventStatus | null; status_after: EventStatus;
   field_changes: FieldChange[];
   new_conflict_ids: string[];

@@ -569,7 +569,7 @@ export interface Version {
   id: string;                         // `${event_id}_v${no}`
   event_id: string; no: number;
   at: string;                         // 演示时间
-  trigger: { kind: 'document' | 'expiry' | 'review'; ref_id: string };
+  trigger: { kind: 'document' | 'expiry' | 'review' | 'decay'; ref_id: string };  // decay 时 ref_id 为事件 ID
   status_before: EventStatus | null; status_after: EventStatus;
   field_changes: FieldChange[];
   new_conflict_ids: string[];
@@ -673,7 +673,7 @@ labels: { status: Record<EventStatus,string>; nature: Record<Nature,string>; sta
 1. 所属材料还没释放 → `not_released`
 2. 所属材料是转载（`repost_of` 不为 null）→ `repost`。转载只展示，权重为 0，也不算独立来源
 3. 所属材料或主张本身被人工标为噪声（存在 `demo_time ≤ T` 的 `mark_noise` 记录）→ `noise`
-4. 存在一条**有效**的主张，其 `revision.targets` 包含本主张 → `superseded`（被替换）
+4. 存在一条通过第 1–3 步的主张（已释放、非转载、未标噪声），其 `revision.targets` 包含本主张 → `superseded`（被替换）。注意：替换方只需通过第 1–3 步，不要求它自身有效，避免「快报被更正后，预告重新生效」
 5. 本主张的 `valid_until ≤ T` → `expired`
 6. 都不满足 → 有效（`excluded_reason = null`）
 
@@ -740,6 +740,8 @@ AI 的判断本身不能直接把状态推到终态：终态只能由官方来�
 - 事件第一次有已释放材料时，生成第 1 个版本，`status_before = null`，说明文字为「发现新事件」。
 - pre 阶段的触发来源：c 时刻释放的本事件材料（触发类型 document，取第一条）；如果没有，就是在 c 时刻到期的主张（触发类型 expiry）。
 - post 阶段的触发来源是那条复核记录（触发类型 review），版本标记 `is_human_correction = true`。
+- 如果状态变化既不是材料释放、也不是到期或复核引起的，而只是时效衰减导致权重变化，触发类型记为 decay，`ref_id` 为事件 ID。
+- 引擎按「不晚于时钟 T 的最后一个检查点」计算，所以两个检查点之间不会出现没有版本的状态变化。
 
 **通知**：每个版本对应一条通知；传入 `watchlist` 时，只保留事件的 `stocks` 与关注列表有交集的。通知 ID 等于版本 ID，按时间倒序排列。
 
@@ -755,7 +757,7 @@ AI 的判断本身不能直接把状态推到终态：终态只能由官方来�
 | `fact_low_tier` | AI 把主张判为事实，但来源等级在 `fact_low_tiers` 中 | 「低等级来源被判为事实，与规则冲突」 |
 | `low_match_confidence` | 材料的同一事件判定置信度低于阈值 | 「同一事件判定置信度低，请确认归属」 |
 
-同一个对象只要有任何一条 `demo_time ≤ T` 的复核记录，就算已处理，不再出现在队列里。
+同一个对象只要有任何一条 `demo_time ≤ T` 的复核记录，就算已处理，不再出现在队列里。材料被标为噪声后，它下面所有主张的复核条目也算已处理。同一个对象同时命中多个原因时，只生成一条复核条目，按 low_confidence → fact_low_tier → low_match_confidence 的顺序取第一个原因。
 
 **可以真实执行的复核动作**：
 - 主张：确认、改性质、标为噪声；
@@ -773,6 +775,8 @@ AI 的判断本身不能直接把状态推到终态：终态只能由官方来�
 5. 基准指数用同样的方法计算。
 
 缺少数据时返回 null。
+
+**已知边界**：行情反应不按演示时钟截断，会用到时钟之后的日线，这样演示时能直接看到完整的 3 日涨跌。README 的已知边界里要写明这一点。
 
 ## B.10 模板文案（固定写法，前端只负责显示）
 

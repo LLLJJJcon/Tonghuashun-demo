@@ -104,7 +104,7 @@ export const versionTpl = {
   /** 人工修正触发：前缀已说明原因，这里不再附触发来源 */
   statusByReview: (from: EventStatus, to: EventStatus) =>
     `状态 ${labels.status[from]} → ${labels.status[to]}`,
-  /** 附录 B 未覆盖：既无材料释放、也无到期，仅因时效衰减导致的状态变化 */
+  /** trigger.kind = decay：既无材料释放、也无到期，仅因时效衰减导致的状态变化 */
   statusByDecay: (from: EventStatus, to: EventStatus) =>
     `状态 ${labels.status[from]} → ${labels.status[to]}（支持证据的时效衰减使权重下降）`,
   field: (label: string, before: string | null, after: string | null) =>

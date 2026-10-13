@@ -19,7 +19,8 @@ export function buildReviewItems(ctx: Ctx, t: number, fx: Effects): ReviewItem[]
     const src = ctx.sources.get(doc.source_id)!;
     const claims = [...(ctx.claimsByDoc.get(doc.id) ?? [])].sort((a, b) => idCompare(a.id, b.id));
     for (const c of claims) {
-      if (fx.handled.has(`claim:${c.id}`)) continue;
+      // 材料被标为噪声后，其下主张的复核条目也视为已处理
+      if (fx.handled.has(`claim:${c.id}`) || fx.noiseDocs.has(doc.id)) continue;
       let code: ReviewItem['reason_code'] | null = null;
       if (c.ai.confidence < th && doc.repost_of === null) code = 'low_confidence';
       else if (c.nature === 'fact' && fact_low_tiers.includes(src.tier)) code = 'fact_low_tier';
