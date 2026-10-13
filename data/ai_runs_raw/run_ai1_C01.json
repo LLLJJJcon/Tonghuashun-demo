@@ -1,0 +1,30 @@
+{
+  "id": "run_ai1_C01",
+  "stage": "AI-1",
+  "document_id": "doc_C01",
+  "model": "claude-opus-5-5（Claude Code 子 agent 按提示词执行）",
+  "prompt_file": "prompts/ai1-document.md",
+  "prompt_version": "v1.0",
+  "run_at": "2026-10-13T14:12:59+08:00",
+  "status": "ok",
+  "attempts": 1,
+  "input_summary": "材料 doc_C01；7 天内已有材料 0 条：",
+  "input_message": "【待分析材料】\n材料 ID：doc_C01\n标题：博盈特焊：2026年6月23日投资者关系活动记录表（编号 2026-021）\n来源：博盈特焊投资者关系活动记录表（A 级，company）\n披露时间：2026-06-23T18:18:28+08:00\n摘录：3、当前越南生产基地 HRSG 生产线建设进展如何？一条HRSG 生产线对应的产能情况是怎么样的？目前越南生产基地一期的 4 条 HRSG 生产线已满产，在建的 4 条 HRSG 生产线中已有 2 条进入设备调试阶段，即将投入生产，剩下 2 条生产线将于 7 月投产；下半年公司计划在现有基础上，再建设 2 至 4 条 HRSG 生产线，预计在今年内完成建设工作。\n\n【同一股票前后 7 天内已有材料】（可能为空）\n（无）",
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "at": "2026-10-13T14:12:59+08:00",
+      "raw_output": "{\"is_repost\": false, \"repost_of\": null, \"stocks\": [\"301468.SZ\"], \"confidence\": 0.97, \"reason\": \"公司自行发布的投资者关系活动记录表，7 天内没有其他同股票材料，不是转载；主体为博盈特焊（301468）。\"}\n",
+      "validation_errors": []
+    }
+  ],
+  "parsed_output": {
+    "is_repost": false,
+    "repost_of": null,
+    "stocks": [
+      "301468.SZ"
+    ],
+    "confidence": 0.97,
+    "reason": "公司自行发布的投资者关系活动记录表，7 天内没有其他同股票材料，不是转载；主体为博盈特焊（301468）。"
+  }
+}

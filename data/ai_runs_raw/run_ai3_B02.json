@@ -1,0 +1,30 @@
+{
+  "id": "run_ai3_B02",
+  "stage": "AI-3",
+  "document_id": "doc_B02",
+  "model": "claude-opus-5-5（Claude Code 子 agent 按提示词执行）",
+  "prompt_file": "prompts/ai3-event-match.md",
+  "prompt_version": "v1.0",
+  "run_at": "2026-10-13T14:11:07+08:00",
+  "status": "ok",
+  "attempts": 1,
+  "input_summary": "材料 doc_B02；AI-2 主张 2 条；候选事件 ['evt_B']",
+  "input_message": "【新材料】\n材料 ID：doc_B02\n标题：无锡德林海环保科技股份有限公司2025年度业绩快报公告（2026-006）\n来源：上海证券交易所（上市公司公告）（S 级）\n披露时间：2026-02-26T15:32:58+08:00\n摘录：本公告所载 2025 年度主要财务数据为初步核算数据，未经会计师事务所审计……单位：人民币万元 项目 本报告期 上年同期 增减变动幅度（％） 营业总收入 52,615.77 44,837.02 17.35……归属于母公司所有者的净利润 5,230.75 -8,614.88 不适用\nAI-2 主张：\n- c1｜fact｜support（针对 evt_B）｜归属于母公司所有者的净利润 5,230.75 -8,614.88 不适用\n- c2｜fact｜neutral（针对 evt_B）｜本公告所载 2025 年度主要财务数据为初步核算数据，未经会计师事务所审计\n\n【候选事件】\n- evt_B｜德林海 2025 年度业绩｜核心主张：德林海 2025 年度归属于母公司所有者的净利润（扭亏为盈）\n  已归属材料摘要：\n  - doc_B01｜2026-01-29T15:36:04+08:00｜无锡德林海环保科技股份有限公司2025年年度业绩预盈公告（2026-003）",
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "at": "2026-10-13T14:11:07+08:00",
+      "raw_output": "{\"decision\": \"same\", \"event_id\": \"evt_B\", \"candidate_event_ids\": [\"evt_B\"], \"confidence\": 0.97, \"reason\": \"德林海 2025 年度业绩快报，与 evt_B（2025 年度归母净利润）及已归属的业绩预盈公告是同一事项，并入。\"}\n",
+      "validation_errors": []
+    }
+  ],
+  "parsed_output": {
+    "decision": "same",
+    "event_id": "evt_B",
+    "candidate_event_ids": [
+      "evt_B"
+    ],
+    "confidence": 0.97,
+    "reason": "德林海 2025 年度业绩快报，与 evt_B（2025 年度归母净利润）及已归属的业绩预盈公告是同一事项，并入。"
+  }
+}

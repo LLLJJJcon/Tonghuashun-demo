@@ -1,0 +1,1152 @@
+[
+  {
+    "id": "doc_B01_c1",
+    "document_id": "doc_B01",
+    "event_id": "evt_B",
+    "text": "德林海预计 2025 年度扭亏为盈，归母净利润 4,700.00 万元至 6,300.00 万元",
+    "quote": "预计 2025 年年度实现归属于母公司所有者的净利润与上年同期（法定披露数据）相比，将实现扭亏为盈，实现归属于母公司所有者的净利润为 4,700.00万元至 6,300.00 万元",
+    "nature": "fact",
+    "stance": "support",
+    "fields": {
+      "profit": {
+        "value": "47000000-63000000",
+        "display": "4,700.00–6,300.00 万元"
+      }
+    },
+    "occurred_at": "2025-12-31T23:59:59+08:00",
+    "occurred_precision": "range",
+    "occurred_range": [
+      "2025-01-01T00:00:00+08:00",
+      "2025-12-31T23:59:59+08:00"
+    ],
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B01",
+      "confidence": 0.86,
+      "reason": "公司在交易所正式披露的年度业绩预告，数据针对已结束的 2025 年度，按提示词要点 6 判为事实；措辞为「预计」且未经审计，有一定歧义。直接支持核心主张（扭亏为盈）。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_B01_c2",
+    "document_id": "doc_B01",
+    "event_id": "evt_B",
+    "text": "本次业绩预告未经注册会计师审计",
+    "quote": "本次业绩预告未经注册会计师审计。",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B01",
+      "confidence": 0.9,
+      "reason": "公司对预告数据性质的正式说明，可核验；只说明数据未审计，不支持也不反对扭亏为盈。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_B02_c1",
+    "document_id": "doc_B02",
+    "event_id": "evt_B",
+    "text": "德林海 2025 年度业绩快报：归母净利润 5,230.75 万元（上年同期 -8,614.88 万元）",
+    "quote": "归属于母公司所有者的净利润 5,230.75 -8,614.88 不适用",
+    "nature": "fact",
+    "stance": "support",
+    "revision": {
+      "type": "update",
+      "targets": [
+        "doc_B01_c1"
+      ]
+    },
+    "fields": {
+      "profit": {
+        "value": 52307500,
+        "display": "5,230.75 万元"
+      }
+    },
+    "occurred_at": "2025-12-31T23:59:59+08:00",
+    "occurred_precision": "range",
+    "occurred_range": [
+      "2025-01-01T00:00:00+08:00",
+      "2025-12-31T23:59:59+08:00"
+    ],
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B02",
+      "confidence": 0.9,
+      "reason": "交易所正式披露的业绩快报数据，针对已结束的 2025 年度，判为事实；由亏损转为盈利，支持核心主张。快报以具体值替换预告区间，属于更新（update）doc_B01_c1。表格转写的引用缺少单位说明，单位依据摘录中的「单位：人民币万元」。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_B02_c2",
+    "document_id": "doc_B02",
+    "event_id": "evt_B",
+    "text": "快报数据为初步核算数据，未经会计师事务所审计",
+    "quote": "本公告所载 2025 年度主要财务数据为初步核算数据，未经会计师事务所审计",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B02",
+      "confidence": 0.9,
+      "reason": "公司对数据性质的正式说明，不表明对扭亏为盈的态度。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_B03_c1",
+    "document_id": "doc_B03",
+    "event_id": "evt_B",
+    "text": "德林海子公司「星云湖项目」诉讼二审驳回上诉、维持原判，公司胜诉",
+    "quote": "诉讼结果：驳回上诉，维持原判（公司胜诉）",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B03",
+      "confidence": 0.82,
+      "reason": "公司正式披露的终审判决结果，可核验，判为事实；它本身是诉讼事项，不直接陈述 2025 年度归母净利润，对核心主张判为无关。摘录中没有判决送达日期，发生时间未知。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_B03_c2",
+    "document_id": "doc_B03",
+    "event_id": "evt_B",
+    "text": "公司将在编制 2025 年年报时冲回 4,807.95 万元预计负债，前期业绩预盈公告和业绩快报中的相关财务数据将进行更正",
+    "quote": "公司将在编制2025 年年报时，依据终审判决结果及相关会计准则，将 2024 年度计提的 4,807.95万元预计负债予以冲回，公司前期披露的公司《2025 年度业绩预盈公告》《2025年度业绩快报公告》中的相关财务数据将进行更正",
+    "nature": "opinion",
+    "stance": "support",
+    "occurred_at": "2026-03-02T16:05:59+08:00",
+    "occurred_precision": "datetime",
+    "valid_until": "2026-04-30T23:59:59+08:00",
+    "ai": {
+      "run_id": "run_ai2_B03",
+      "confidence": 0.6,
+      "reason": "这是公司对将来会计处理和更正的表态（「将…予以冲回」「将进行更正」），按要点 1 判为观点，有效期按年报法定披露截止日 4 月 30 日推定（原文只写「编制 2025 年年报时」）。冲回预计负债会增加 2025 年利润，倾向支持扭亏为盈；但它没有给出新数值，也不是正式更正，所以不填修订。性质（事实/观点）、是否算修订、立场都有歧义，置信度较低。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_B04_c1",
+    "document_id": "doc_B04",
+    "event_id": "evt_B",
+    "text": "更正后德林海 2025 年度归母净利润为 10,038.70 万元（修正前 5,230.75 万元）",
+    "quote": "归属于母公司所有者的净利润 5,230.75 10,038.70 -8,614.88 不适用",
+    "nature": "fact",
+    "stance": "support",
+    "revision": {
+      "type": "correct",
+      "targets": [
+        "doc_B02_c1",
+        "doc_B01_c1"
+      ]
+    },
+    "fields": {
+      "profit": {
+        "value": 100387000,
+        "display": "10,038.70 万元"
+      }
+    },
+    "occurred_at": "2025-12-31T23:59:59+08:00",
+    "occurred_precision": "range",
+    "occurred_range": [
+      "2025-01-01T00:00:00+08:00",
+      "2025-12-31T23:59:59+08:00"
+    ],
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B04",
+      "confidence": 0.9,
+      "reason": "交易所正式发布的更正公告，标题写明更正 2025 年度业绩预告和业绩快报，修正后数值为事实，支持扭亏为盈；作为正式更正，修订类型为 correct，目标为快报主张和预告主张。doc_B03_c2 只是预告将要更正、没有数值，未列为目标。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_B04_c2",
+    "document_id": "doc_B04",
+    "event_id": "evt_B",
+    "text": "公司将 2024 年度计提的 4,807.95 万元预计负债于 2025 年度冲回，调增 2025 年度营业收入及利润",
+    "quote": "公司将 2024 年度计提的 4,807.95 万元预计负债于 2025 年度予以冲回，调增 2025 年度营业收入及利润",
+    "nature": "fact",
+    "stance": "support",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B04",
+      "confidence": 0.8,
+      "reason": "公司正式披露已确定的会计处理（依据已执行的终审判决），判为事实；它增加 2025 年度利润，支持扭亏为盈。冲回的具体发生日期摘录中未给出。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_B05_c1",
+    "document_id": "doc_B05",
+    "event_id": "evt_B",
+    "text": "财闻转述更正公告：修正后德林海 2025 年度归母净利润 10,038.70 万元",
+    "quote": "归属于上市公司股东的净利润10,038.70万元，上年同期-8,614.88万元",
+    "nature": "fact",
+    "stance": "support",
+    "fields": {
+      "profit": {
+        "value": 100387000,
+        "display": "10,038.70 万元"
+      }
+    },
+    "occurred_at": "2025-12-31T23:59:59+08:00",
+    "occurred_precision": "range",
+    "occurred_range": [
+      "2025-01-01T00:00:00+08:00",
+      "2025-12-31T23:59:59+08:00"
+    ],
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B05",
+      "confidence": 0.85,
+      "reason": "媒体转述公司正式更正公告中的数据，数值与 doc_B04_c1 一致、可核验，按要点 5 判为事实，支持扭亏为盈。它是对更正的报道而不是更正本身，不填修订。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_B05_c2",
+    "document_id": "doc_B05",
+    "event_id": "evt_B",
+    "text": "德林海于 3 月 17 日发布 2025 年度业绩预告、业绩快报的更正公告",
+    "quote": "3月17日，德林海（688069.SH）发布关于子公司诉讼结果执行暨2025 年度业绩预告、业绩快报的更正公告",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": "2026-03-17T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B05",
+      "confidence": 0.85,
+      "reason": "报道公司发布了更正公告这一可核验的事实；只说明有更正，不直接表态归母净利润，判为无关。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_C01_c1",
+    "document_id": "doc_C01",
+    "event_id": "evt_C",
+    "text": "公司预计越南基地在建的剩下 2 条 HRSG 生产线将于 7 月投产",
+    "quote": "剩下 2 条生产线将于 7 月投产",
+    "nature": "opinion",
+    "stance": "support",
+    "fields": {
+      "planned_date": {
+        "value": "2026-07",
+        "display": "2026 年 7 月"
+      }
+    },
+    "occurred_at": "2026-06-23T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": "2026-07-31T23:59:59+08:00",
+    "ai": {
+      "run_id": "run_ai2_C01",
+      "confidence": 0.78,
+      "reason": "公司在投资者关系活动中对未来投产时间的预计，按要点 1 判为观点，有效期取 7 月末。它支持「剩余 2 条线按公司预计时间投产」，但给出的时间是 7 月而非核心主张括号中的 8 月，立场判断有一定歧义。发生时间取记录表标题中的调研日期 6 月 23 日。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_C01_c2",
+    "document_id": "doc_C01",
+    "event_id": "evt_C",
+    "text": "越南基地一期 4 条 HRSG 生产线已满产，在建 4 条中已有 2 条进入设备调试阶段",
+    "quote": "目前越南生产基地一期的 4 条 HRSG 生产线已满产，在建的 4 条 HRSG 生产线中已有 2 条进入设备调试阶段",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": "2026-06-23T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_C01",
+      "confidence": 0.75,
+      "reason": "公司对当前产线状态的陈述，判为事实；说的是一期产线和另外 2 条在建线，不涉及剩余 2 条线是否按期投产，判为无关。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_C05_c1",
+    "document_id": "doc_C05",
+    "event_id": "evt_C",
+    "text": "公司在 6 月 25 日调研中重申剩下 2 条生产线将于 7 月投产",
+    "quote": "剩下 2 条生产线将于 7 月投产",
+    "nature": "opinion",
+    "stance": "support",
+    "fields": {
+      "planned_date": {
+        "value": "2026-07",
+        "display": "2026 年 7 月"
+      }
+    },
+    "occurred_at": "2026-06-25T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": "2026-07-31T23:59:59+08:00",
+    "ai": {
+      "run_id": "run_ai2_C05",
+      "confidence": 0.8,
+      "reason": "公司对投产时间的预计，判为观点，有效期取 7 月末；与 doc_C01_c1 的预计时间相同，是重申而非替换，不填修订。时间为 7 月而非核心主张括号中的 8 月，立场有一定歧义。发生时间取记录表标题中的 6 月 25 日。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_C05_c2",
+    "document_id": "doc_C05",
+    "event_id": "evt_C",
+    "text": "公司预计截至 2027 年上半年在越南基地总共建设 10-12 条 HRSG 生产线",
+    "quote": "截至 2027 年上半年，公司预计在越南生产基地总共建设10-12 条 HRSG 生产线",
+    "nature": "opinion",
+    "stance": "neutral",
+    "occurred_at": "2026-06-25T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": "2027-06-30T23:59:59+08:00",
+    "ai": {
+      "run_id": "run_ai2_C05",
+      "confidence": 0.8,
+      "reason": "公司对产能规划的预计，判为观点，有效期取 2027 年上半年末；讲的是总体规划而不是剩余 2 条线的投产时间，判为无关。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_C02_c1",
+    "document_id": "doc_C02",
+    "event_id": "evt_C",
+    "text": "另外 2 条 HRSG 生产线还在建设中，公司预计将于 8 月份投产",
+    "quote": "另外2条HRSG生产线还在建设中，预计将于8月份投产",
+    "nature": "opinion",
+    "stance": "support",
+    "revision": {
+      "type": "update",
+      "targets": [
+        "doc_C01_c1",
+        "doc_C05_c1"
+      ]
+    },
+    "fields": {
+      "planned_date": {
+        "value": "2026-08",
+        "display": "2026 年 8 月"
+      }
+    },
+    "occurred_at": "2026-07-14T18:27:44+08:00",
+    "occurred_precision": "datetime",
+    "valid_until": "2026-08-31T23:59:59+08:00",
+    "ai": {
+      "run_id": "run_ai2_C02",
+      "confidence": 0.85,
+      "reason": "公司官方回复中对投产时间的新预计，判为观点，有效期取 8 月末；把此前「7 月投产」的预计改为 8 月，属于更新（update）。支持剩余 2 条线按公司预计时间（8 月）投产。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_C02_c2",
+    "document_id": "doc_C02",
+    "event_id": "evt_C",
+    "text": "越南基地二期新建的 2 条 HRSG 生产线已经投产",
+    "quote": "公司越南生产基地二期新建的2条HRSG生产线已经投产",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_C02",
+      "confidence": 0.8,
+      "reason": "公司官方确认已发生的投产，判为事实；说的是先行的 2 条线，不是核心主张中的剩余 2 条线，判为无关。投产具体日期未给出。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_C03_c1",
+    "document_id": "doc_C03",
+    "event_id": "evt_C",
+    "text": "公司重申二期剩余 2 条 HRSG 生产线预计将于 8 月份投产，届时越南基地共有 8 条生产线投入生产",
+    "quote": "预计将于8月份投产。届时，越南生产基地共有8条生产线投入生产",
+    "nature": "opinion",
+    "stance": "support",
+    "fields": {
+      "planned_date": {
+        "value": "2026-08",
+        "display": "2026 年 8 月"
+      }
+    },
+    "occurred_at": "2026-08-12T18:21:10+08:00",
+    "occurred_precision": "datetime",
+    "valid_until": "2026-08-31T23:59:59+08:00",
+    "ai": {
+      "run_id": "run_ai2_C03",
+      "confidence": 0.85,
+      "reason": "公司官方回复对投产时间的预计，判为观点，有效期取 8 月末；预计时间与 doc_C02_c1 相同，是重申，不填修订。支持核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_C03_c2",
+    "document_id": "doc_C03",
+    "event_id": "evt_C",
+    "text": "截至 8 月 12 日，二期剩余 2 条 HRSG 生产线仍在安装中",
+    "quote": "二期剩余2条HRSG生产线目前在安装中",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": "2026-08-12T18:21:10+08:00",
+    "occurred_precision": "datetime",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_C03",
+      "confidence": 0.72,
+      "reason": "公司官方对当前进度的陈述，判为事实。它回答了提问「是否 8 月上旬已投入生产」——尚未投产；但公司仍预计 8 月投产，此时并不构成对核心主张的否认，判为无关。是否应视为反对有一定歧义。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_C04_c1",
+    "document_id": "doc_C04",
+    "event_id": "evt_C",
+    "text": "财闻转述公司互动易回复：二期剩余 2 条 HRSG 生产线目前在安装中，预计 8 月份投产",
+    "quote": "博盈特焊（301468）回复称，二期剩余2条HRSG生产线目前在安装中，预计将于8月份投产",
+    "nature": "opinion",
+    "stance": "support",
+    "fields": {
+      "planned_date": {
+        "value": "2026-08",
+        "display": "2026 年 8 月"
+      }
+    },
+    "occurred_at": "2026-08-12T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": "2026-08-31T23:59:59+08:00",
+    "ai": {
+      "run_id": "run_ai2_C04",
+      "confidence": 0.82,
+      "reason": "媒体转述公司对投产时间的预计，被转述内容是公司观点，判为观点，有效期取 8 月末；支持核心主张。原文只写「近日」，发生时间按 doc_C03 回复日期推定为 8 月 12 日。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_D01_c1",
+    "document_id": "doc_D01",
+    "event_id": "evt_D",
+    "text": "盛和资源 9 月 15 日首次以集中竞价方式回购 156.73 万股，成交金额 3,335.7023 万元",
+    "quote": "2026 年 9 月 15 日，公司通过集中竞价交易方式首次回购股份 156.73 万股，本次回购股份占公司总股本的比例为0.0894%，本次回购股份的最高价为 21.30 元/股，最低价为 21.14 元/股，交易总金额为 3,335.7023 万元",
+    "nature": "fact",
+    "stance": "support",
+    "fields": {
+      "repurchased_amount": {
+        "value": 33357023,
+        "display": "3,335.70 万元"
+      },
+      "repurchased_shares": {
+        "value": 1567300,
+        "display": "156.73 万股"
+      }
+    },
+    "occurred_at": "2026-09-15T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_D01",
+      "confidence": 0.95,
+      "reason": "公司在交易所正式披露的已实施回购，判为事实，直接证实正在实施股份回购；与中国稀土集团收购控股权（evt_A）无关。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_D01_c2",
+    "document_id": "doc_D01",
+    "event_id": "evt_D",
+    "text": "回购股份全部用于股权激励或员工持股计划",
+    "quote": "回购股份全部用于股权激励或员工持股计划。",
+    "nature": "fact",
+    "stance": "support",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_D01",
+      "confidence": 0.85,
+      "reason": "公司正式披露的回购方案用途（董事会已审议通过），判为事实，支持核心主张中的用途描述。方案审议日期不在摘录中。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A02_c1",
+    "document_id": "doc_A02",
+    "event_id": "evt_A",
+    "text": "据路透社报道，中国稀土集团正在洽谈收购盛和资源",
+    "quote": "路透報導，中國稀土集團正在洽談收購盛和資源",
+    "nature": "speculation",
+    "stance": "support",
+    "fields": {
+      "acquirer": {
+        "value": "中国稀土集团",
+        "display": "中国稀土集团"
+      }
+    },
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A02",
+      "confidence": 0.85,
+      "reason": "转述路透社报道，路透社的依据是「知情人士」，属于非官方、基于线索的说法，按要点 2 判为推测；直接支持核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A02_c2",
+    "document_id": "doc_A02",
+    "event_id": "evt_A",
+    "text": "消息人士称两家公司的谈判自今年稍早已展开，中国稀土集团希望取得控股权",
+    "quote": "消息人士表示，兩家公司之間的談判自今年稍早便已展開。中國稀土集團希望取得控股權。",
+    "nature": "speculation",
+    "stance": "support",
+    "fields": {
+      "stake": {
+        "value": "控股权",
+        "display": "控股权"
+      }
+    },
+    "occurred_at": "2026-01-01T00:00:00+08:00",
+    "occurred_precision": "range",
+    "occurred_range": [
+      "2026-01-01T00:00:00+08:00",
+      "2026-09-18T22:53:00+08:00"
+    ],
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A02",
+      "confidence": 0.85,
+      "reason": "「消息人士表示」，按要点 2 判为推测；支持核心主张并给出标的为控股权。谈判开始时间只说「今年稍早」，记为 2026 年初至报道日的区间。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A02_c3",
+    "document_id": "doc_A02",
+    "event_id": "evt_A",
+    "text": "知情人士称交易将转让盛和资源海外公司股份的控制权，包括 MP Materials 3% 股份",
+    "quote": "兩名知情人士透露，這筆交易將轉讓盛和在海外公司股份的控制權，包括美國稀土公司MP Materials的3％股份。",
+    "nature": "speculation",
+    "stance": "support",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A02",
+      "confidence": 0.8,
+      "reason": "「知情人士透露」，判为推测；描述交易影响，间接支持核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A03_c1",
+    "document_id": "doc_A03",
+    "event_id": "evt_A",
+    "text": "自媒体转述路透社：中国稀土集团正与盛和资源就收购进行谈判，希望获得控股权",
+    "quote": "路透社9月18日晚独家报道，中国稀土集团正在与盛和资源就收购事宜进行谈判；两名知情人士称，谈判已持续一段时间，中国稀土集团希望获得控股权",
+    "nature": "speculation",
+    "stance": "support",
+    "fields": {
+      "acquirer": {
+        "value": "中国稀土集团",
+        "display": "中国稀土集团"
+      },
+      "stake": {
+        "value": "控股权",
+        "display": "控股权"
+      }
+    },
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A03",
+      "confidence": 0.8,
+      "reason": "内容依据「两名知情人士」，被转述的本身是推测，按要点 2、5 判为推测；支持核心主张。「路透社报道了此事」本身可核验，但主张的实质是洽谈是否存在，所以不判为事实。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A03_c2",
+    "document_id": "doc_A03",
+    "event_id": "evt_A",
+    "text": "相关交易尚未正式宣布，中国稀土集团、盛和资源及商务部均未公开回应",
+    "quote": "相关交易尚未正式宣布，中国稀土集团、盛和资源及商务部均未就此公开回应。",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": "2026-09-19T02:22:00+08:00",
+    "occurred_precision": "datetime",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A03",
+      "confidence": 0.68,
+      "reason": "对「截至发稿时尚无官方回应」这一状态的陈述，可以核验，判为事实；它不支持也不否认洽谈存在，判为无关。该句出自 AI 辅助创作的自媒体，可能只是沿用路透社原文的说法，作者是否核实过不确定，置信度较低。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A04_c1",
+    "document_id": "doc_A04",
+    "event_id": "evt_A",
+    "text": "控股股东综合利用所书面回函：不存在拟对外转让公司控股权的情形",
+    "quote": "综合利用所回函明确表示不存在拟对外转让公司控股权的情形",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A04",
+      "confidence": 0.9,
+      "reason": "公司在交易所正式披露的控股股东书面回函，可核验，判为事实；控股股东否认拟转让控股权，直接反对「中国稀土集团正就取得控股权进行洽谈」。回函日期摘录未给出。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A04_c2",
+    "document_id": "doc_A04",
+    "event_id": "evt_A",
+    "text": "公司称境外媒体关于某稀土企业集团拟收购公司控股权的说法为不实言论",
+    "quote": "关注到境外媒体出现关于某稀土企业集团拟收购公司控股权进而间接持有公司境外资产权益的不实言论，并被国内部分媒体转载",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A04",
+      "confidence": 0.85,
+      "reason": "公司在正式公告中对传闻的定性，属于信息主体的正式披露，判为事实；明确否认传闻，判为反对。「不实」是公司的定性而非第三方核验结果，有少许歧义。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A05_c1",
+    "document_id": "doc_A05",
+    "event_id": "evt_A",
+    "text": "财联社转述澄清公告：控股股东回函明确表示不存在拟对外转让公司控股权的情形",
+    "quote": "综合利用所回函明确表示不存在拟对外转让公司控股权的情形",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A05",
+      "confidence": 0.88,
+      "reason": "媒体转述公司正式澄清公告中的控股股东回函，可核验，按要点 5 判为事实；否认拟转让控股权，反对核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A05_c2",
+    "document_id": "doc_A05",
+    "event_id": "evt_A",
+    "text": "盛和资源发布澄清公告，称收购控股权的境外报道为不实言论",
+    "quote": "盛和资源(600392.SH)发布澄清公告称，公司关注到境外媒体出现关于某稀土企业集团拟收购公司控股权进而间接持有公司境外资产权益的不实言论",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": "2026-09-20T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A05",
+      "confidence": 0.85,
+      "reason": "转述公司已发布澄清公告这一可核验事实及其定性，判为事实、反对。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A14_c1",
+    "document_id": "doc_A14",
+    "event_id": "evt_A",
+    "text": "财闻转述澄清公告：控股股东回函明确表示不存在拟对外转让公司控股权的情形",
+    "quote": "经公司书面征询控股股东中国地质科学院矿产综合利用研究所，综合利用所回函明确表示不存在拟对外转让公司控股权的情形。",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A14",
+      "confidence": 0.86,
+      "reason": "逐字转述公司正式澄清公告内容，可核验，按要点 5 判为事实；否认拟转让控股权，反对核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A14_c2",
+    "document_id": "doc_A14",
+    "event_id": "evt_A",
+    "text": "据路透社报道，消息人士称中国稀土集团正与盛和资源展开收购谈判",
+    "quote": "日前，据路透社报道，消息人士称，中国稀土（000831）集团正与盛和资源（600392）展开收购谈判。",
+    "nature": "speculation",
+    "stance": "support",
+    "fields": {
+      "acquirer": {
+        "value": "中国稀土集团",
+        "display": "中国稀土集团"
+      }
+    },
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A14",
+      "confidence": 0.84,
+      "reason": "背景回顾，依据是「消息人士称」，按要点 2 判为推测；内容支持核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A14_c3",
+    "document_id": "doc_A14",
+    "event_id": "evt_A",
+    "text": "消息人士称双方自今年年初起已展开磋商",
+    "quote": "消息人士称，双方自今年年初起已展开磋商。",
+    "nature": "speculation",
+    "stance": "support",
+    "occurred_at": "2026-01-01T00:00:00+08:00",
+    "occurred_precision": "month",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A14",
+      "confidence": 0.8,
+      "reason": "「消息人士称」，判为推测，支持核心主张；磋商起始时间为「今年年初」，按月份精度记为 2026 年 1 月。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A08_c1",
+    "document_id": "doc_A08",
+    "event_id": "evt_A",
+    "text": "有消息称中国稀土集团正洽谈收购盛和资源",
+    "quote": "近期，有消息称中国稀土（000831.SZ）集团正洽谈收购盛和资源（600392.SH）。",
+    "nature": "rumor",
+    "stance": "support",
+    "fields": {
+      "acquirer": {
+        "value": "中国稀土集团",
+        "display": "中国稀土集团"
+      }
+    },
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A08",
+      "confidence": 0.68,
+      "reason": "摘录中只写「有消息称」，未说明来源，按传闻处理；内容支持核心主张。结合已有材料可知消息源自路透社援引知情人士的报道，也可判为推测，存在歧义。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A08_c2",
+    "document_id": "doc_A08",
+    "event_id": "evt_A",
+    "text": "中国稀土集团办公室工作人员称「不了解相关情况」",
+    "quote": "财闻拨打中国稀土集团办公室电话，对方工作人员表示“不了解相关情况”。",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": "2026-09-20T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A08",
+      "confidence": 0.55,
+      "reason": "记者致电得到回应这件事本身是可核验的事实；但回应者是交易对手方办公室的普通工作人员，「不了解相关情况」既非确认也非否认，判为无关。也可以理解为不予证实（倾向反对），或因回应者身份而视为不具证明力，立场和性质都有真实歧义。致电日期按报道当天推定。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A08_c3",
+    "document_id": "doc_A08",
+    "event_id": "evt_A",
+    "text": "财闻转述澄清公告：控股股东回函表示不存在拟对外转让公司控股权的情形",
+    "quote": "9月20日，盛和资源发布公告显示，其书面征询控股股东中国地质科学院矿产综合利用研究所（以下简称“综合利用所”），综合利用所回函明确表示不存在拟对外转让公司控股权的情形。",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": "2026-09-20T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A08",
+      "confidence": 0.86,
+      "reason": "转述公司正式公告内容，按要点 5 判为事实；否认拟转让控股权，反对核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A09_c1",
+    "document_id": "doc_A09",
+    "event_id": "evt_A",
+    "text": "有消息称中国稀土集团正洽谈收购盛和资源",
+    "quote": "近期，有消息称中国稀土（000831）（000831.SZ）集团正洽谈收购盛和资源（600392）（600392.SH）。",
+    "nature": "rumor",
+    "stance": "support",
+    "fields": {
+      "acquirer": {
+        "value": "中国稀土集团",
+        "display": "中国稀土集团"
+      }
+    },
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A09",
+      "confidence": 0.68,
+      "reason": "只写「有消息称」，来源不明，按传闻处理，支持核心主张；从上下文看消息可能源自媒体援引知情人士的报道，也可判为推测，存在歧义。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A09_c2",
+    "document_id": "doc_A09",
+    "event_id": "evt_A",
+    "text": "中国稀土集团办公室工作人员称「不了解相关情况」",
+    "quote": "财闻拨打中国稀土（000831）集团办公室电话，对方工作人员表示“不了解相关情况”。",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": "2026-09-20T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A09",
+      "confidence": 0.55,
+      "reason": "记者致电获得回应本身可核验，判为事实；普通工作人员「不了解」既不确认也不否认，判为无关。也可理解为不予证实（倾向反对），立场和证明力都有真实歧义。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A09_c3",
+    "document_id": "doc_A09",
+    "event_id": "evt_A",
+    "text": "转述澄清公告：控股股东回函表示不存在拟对外转让公司控股权的情形",
+    "quote": "9月20日，盛和资源（600392）发布公告显示，其书面征询控股股东中国地质科学院矿产综合利用研究所（以下简称“综合利用所”），综合利用所回函明确表示不存在拟对外转让公司控股权的情形。",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": "2026-09-20T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A09",
+      "confidence": 0.86,
+      "reason": "转述公司正式公告，按要点 5 判为事实；否认拟转让控股权，反对核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A06_c1",
+    "document_id": "doc_A06",
+    "event_id": "evt_A",
+    "text": "财联社转述澄清公告：控股股东回函明确表示不存在拟对外转让公司控股权的情形",
+    "quote": "综合利用所回函明确表示不存在拟对外转让公司控股权的情形",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A06",
+      "confidence": 0.88,
+      "reason": "转述公司正式澄清公告中的控股股东回函，按要点 5 判为事实；否认拟转让控股权，反对核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A06_c2",
+    "document_id": "doc_A06",
+    "event_id": "evt_A",
+    "text": "盛和资源发布澄清公告，称收购控股权的境外报道为不实言论",
+    "quote": "盛和资源(600392.SH)发布澄清公告称，公司关注到境外媒体出现关于某稀土企业集团拟收购公司控股权进而间接持有公司境外资产权益的不实言论",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A06",
+      "confidence": 0.85,
+      "reason": "转述公司已发布澄清公告及其定性，可核验，判为事实、反对。摘录中没有写明公告日期。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A07_c1",
+    "document_id": "doc_A07",
+    "event_id": "evt_A",
+    "text": "转述澄清公告：控股股东回函明确表示不存在拟对外转让公司控股权的情形",
+    "quote": "综合利用所回函明确表示不存在拟对外转让公司控股权的情形",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A07",
+      "confidence": 0.88,
+      "reason": "转述公司正式澄清公告中的控股股东回函，按要点 5 判为事实；否认拟转让控股权，反对核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A07_c2",
+    "document_id": "doc_A07",
+    "event_id": "evt_A",
+    "text": "盛和资源发布澄清公告，称收购控股权的境外报道为不实言论",
+    "quote": "盛和资源(600392.SH)发布澄清公告称，公司关注到境外媒体出现关于某稀土企业集团拟收购公司控股权进而间接持有公司境外资产权益的不实言论",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A07",
+      "confidence": 0.85,
+      "reason": "转述公司已发布澄清公告及其定性，可核验，判为事实、反对。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A10_c1",
+    "document_id": "doc_A10",
+    "event_id": "evt_A",
+    "text": "盛和资源 9 月 20 日发布澄清公告，称收购控股权的境外媒体说法不实",
+    "quote": "9月20日，盛和资源（600392.SH）发布澄清公告称，境外媒体有关某稀土企业集团拟收购公司控股权、进而间接持有公司境外资产权益的说法不实。",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": "2026-09-20T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A10",
+      "confidence": 0.86,
+      "reason": "转述公司正式澄清公告，按要点 5 判为事实；否认收购控股权传闻，反对核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A10_c2",
+    "document_id": "doc_A10",
+    "event_id": "evt_A",
+    "text": "中国稀土（000831）证券部工作人员称没有听说相关事项，具体以公告为准",
+    "quote": "9月21日，时代周报记者致电中国稀土集团旗下上市公司中国稀土（000831.SZ）证券部，工作人员表示，没有听说相关事项，具体以公告为准。",
+    "nature": "fact",
+    "stance": "neutral",
+    "occurred_at": "2026-09-21T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A10",
+      "confidence": 0.58,
+      "reason": "记者致电获得回应本身可核验，判为事实。回应者是集团旗下上市公司证券部的工作人员，并非收购方集团本身，「没有听说」「以公告为准」既不确认也不正式否认，判为无关；也可理解为倾向反对，立场有真实歧义。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A13_c1",
+    "document_id": "doc_A13",
+    "event_id": "evt_A",
+    "text": "转述澄清公告：控股股东回函明确表示不存在拟对外转让公司控股权的情形",
+    "quote": "公告显示，盛和资源经书面征询控股股东中国地质科学院矿产综合利用研究所，该研究所回函明确表示，不存在拟对外转让公司控股权的情形。",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A13",
+      "confidence": 0.87,
+      "reason": "转述公司正式澄清公告，按要点 5 判为事实；否认拟转让控股权，反对核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A11_c1",
+    "document_id": "doc_A11",
+    "event_id": "evt_A",
+    "text": "转述澄清公告：控股股东回函明确表示不存在拟对外转让公司控股权的情形",
+    "quote": "盛和资源澄清，经公司书面征询控股股东中国地质科学院矿产综合利用研究所（下称“综合利用所”），综合利用所回函明确表示不存在拟对外转让公司控股权的情形。",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A11",
+      "confidence": 0.87,
+      "reason": "转述公司正式澄清公告，按要点 5 判为事实；否认拟转让控股权，反对核心主张。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_A11_c2",
+    "document_id": "doc_A11",
+    "event_id": "evt_A",
+    "text": "回顾路透社报道：两名知情人士称中国稀土集团正与盛和资源谈判，拟收购其控股权",
+    "quote": "该报道援引两名知情人士的说法称，中国稀土集团正与盛和资源进行谈判，拟收购后者控股权，相关磋商自今年早些时候启动。",
+    "nature": "speculation",
+    "stance": "support",
+    "fields": {
+      "acquirer": {
+        "value": "中国稀土集团",
+        "display": "中国稀土集团"
+      },
+      "stake": {
+        "value": "控股权",
+        "display": "控股权"
+      }
+    },
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A11",
+      "confidence": 0.84,
+      "reason": "被转述内容来自「知情人士」，按要点 2 判为推测；内容支持核心主张。这是对传闻来源的回顾，文章整体立场是报道否认。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  },
+  {
+    "id": "doc_D02_c1",
+    "document_id": "doc_D02",
+    "event_id": "evt_D",
+    "text": "截至 9 月 30 日盛和资源累计回购 234.98 万股，交易总金额 5,000.6470 万元",
+    "quote": "截至 2026 年 9 月 30 日，公司通过集中竞价交易方式累计回购股份 234.98 万股，已回购股份占公司总股本的比例为 0.1341%，回购股份的最高价为 21.37 元/股，最低价为 21.09 元/股，交易总金额为 5,000.6470 万元",
+    "nature": "fact",
+    "stance": "support",
+    "revision": {
+      "type": "update",
+      "targets": [
+        "doc_D01_c1"
+      ]
+    },
+    "fields": {
+      "repurchased_amount": {
+        "value": 50006470,
+        "display": "5,000.65 万元"
+      },
+      "repurchased_shares": {
+        "value": 2349800,
+        "display": "234.98 万股"
+      }
+    },
+    "occurred_at": "2026-09-30T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_D02",
+      "confidence": 0.94,
+      "reason": "公司在交易所正式披露的回购进展，判为事实，证实回购在持续实施；累计数替换首次回购时的累计数，属于更新（update）doc_D01_c1。与控股权传闻（evt_A）无关。"
+    },
+    "prep_check": {
+      "status": "unreviewed"
+    }
+  }
+]

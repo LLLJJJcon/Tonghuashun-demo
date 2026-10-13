@@ -1,0 +1,30 @@
+{
+  "id": "run_ai3_C01",
+  "stage": "AI-3",
+  "document_id": "doc_C01",
+  "model": "claude-opus-5-5（Claude Code 子 agent 按提示词执行）",
+  "prompt_file": "prompts/ai3-event-match.md",
+  "prompt_version": "v1.0",
+  "run_at": "2026-10-13T14:13:21+08:00",
+  "status": "ok",
+  "attempts": 1,
+  "input_summary": "材料 doc_C01；AI-2 主张 2 条；候选事件 ['evt_C']",
+  "input_message": "【新材料】\n材料 ID：doc_C01\n标题：博盈特焊：2026年6月23日投资者关系活动记录表（编号 2026-021）\n来源：博盈特焊投资者关系活动记录表（A 级）\n披露时间：2026-06-23T18:18:28+08:00\n摘录：3、当前越南生产基地 HRSG 生产线建设进展如何？一条HRSG 生产线对应的产能情况是怎么样的？目前越南生产基地一期的 4 条 HRSG 生产线已满产，在建的 4 条 HRSG 生产线中已有 2 条进入设备调试阶段，即将投入生产，剩下 2 条生产线将于 7 月投产；下半年公司计划在现有基础上，再建设 2 至 4 条 HRSG 生产线，预计在今年内完成建设工作。\nAI-2 主张：\n- c1｜opinion｜support（针对 evt_C）｜剩下 2 条生产线将于 7 月投产\n- c2｜fact｜neutral（针对 evt_C）｜目前越南生产基地一期的 4 条 HRSG 生产线已满产，在建的 4 条 HRSG 生产线中已有 2 条进入设备调试阶段\n\n【候选事件】\n- evt_C｜博盈特焊越南基地二期剩余 2 条 HRSG 生产线投产｜核心主张：博盈特焊越南生产基地二期剩余 2 条 HRSG 生产线按公司预计时间（2026 年 8 月）投产\n  已归属材料摘要：\n  （无，该事件尚无已归属材料）",
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "at": "2026-10-13T14:13:21+08:00",
+      "raw_output": "{\"decision\": \"new\", \"event_id\": \"evt_C\", \"candidate_event_ids\": [\"evt_C\"], \"confidence\": 0.9, \"reason\": \"材料主要事项之一是越南基地在建剩余 2 条 HRSG 生产线的投产时间，与 evt_C 是同一件事；evt_C 尚无已归属材料，本材料为第一条。记录表还涉及产能规划等其他内容，但与投产时间直接相关的部分是核心。\"}\n",
+      "validation_errors": []
+    }
+  ],
+  "parsed_output": {
+    "decision": "new",
+    "event_id": "evt_C",
+    "candidate_event_ids": [
+      "evt_C"
+    ],
+    "confidence": 0.9,
+    "reason": "材料主要事项之一是越南基地在建剩余 2 条 HRSG 生产线的投产时间，与 evt_C 是同一件事；evt_C 尚无已归属材料，本材料为第一条。记录表还涉及产能规划等其他内容，但与投产时间直接相关的部分是核心。"
+  }
+}

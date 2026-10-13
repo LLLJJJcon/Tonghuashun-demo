@@ -1,0 +1,55 @@
+[
+  {
+    "id": "evt_A",
+    "title": "中国稀土集团拟收购盛和资源控股权（传闻）",
+    "type": "mna",
+    "core_proposition": "中国稀土集团正就取得盛和资源控股权进行洽谈",
+    "stocks": [
+      { "code": "600392.SH", "name": "盛和资源", "relation": "subject" }
+    ],
+    "fields": [
+      { "key": "acquirer", "label": "收购方" },
+      { "key": "stake", "label": "标的股权" }
+    ],
+    "related_event_ids": ["evt_D"]
+  },
+  {
+    "id": "evt_B",
+    "title": "德林海 2025 年度业绩",
+    "type": "earnings",
+    "core_proposition": "德林海 2025 年度归属于母公司所有者的净利润（扭亏为盈）",
+    "stocks": [
+      { "code": "688069.SH", "name": "德林海", "relation": "subject" }
+    ],
+    "fields": [
+      { "key": "profit", "label": "归母净利润" }
+    ]
+  },
+  {
+    "id": "evt_C",
+    "title": "博盈特焊越南基地二期剩余 2 条 HRSG 生产线投产",
+    "type": "project",
+    "core_proposition": "博盈特焊越南生产基地二期剩余 2 条 HRSG 生产线按公司预计时间（2026 年 8 月）投产",
+    "stocks": [
+      { "code": "301468.SZ", "name": "博盈特焊", "relation": "subject" }
+    ],
+    "fields": [
+      { "key": "planned_date", "label": "预计投产时间" }
+    ]
+  },
+  {
+    "id": "evt_D",
+    "title": "盛和资源以集中竞价交易方式回购股份",
+    "type": "other",
+    "core_proposition": "盛和资源正在实施股份回购（用于员工持股计划或股权激励）",
+    "stocks": [
+      { "code": "600392.SH", "name": "盛和资源", "relation": "subject" }
+    ],
+    "fields": [
+      { "key": "repurchased_amount", "label": "累计回购金额" },
+      { "key": "repurchased_shares", "label": "累计回购股数" }
+    ],
+    "is_counter_example": true,
+    "related_event_ids": ["evt_A"]
+  }
+]

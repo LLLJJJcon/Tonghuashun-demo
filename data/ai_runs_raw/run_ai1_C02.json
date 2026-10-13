@@ -1,0 +1,30 @@
+{
+  "id": "run_ai1_C02",
+  "stage": "AI-1",
+  "document_id": "doc_C02",
+  "model": "claude-opus-5-5（Claude Code 子 agent 按提示词执行）",
+  "prompt_file": "prompts/ai1-document.md",
+  "prompt_version": "v1.0",
+  "run_at": "2026-10-13T14:13:56+08:00",
+  "status": "ok",
+  "attempts": 1,
+  "input_summary": "材料 doc_C02；7 天内已有材料 0 条：",
+  "input_message": "【待分析材料】\n材料 ID：doc_C02\n标题：互动易回复：请问越南工厂原计划于二季度和7月投产的生产线目前进度如何？是否投产了？\n来源：深交所互动易（博盈特焊官方回复）（A 级，company）\n披露时间：2026-07-14T18:27:44+08:00\n摘录：尊敬的投资者，您好！公司越南生产基地二期新建的2条HRSG生产线已经投产，另外2条HRSG生产线还在建设中，预计将于8月份投产。感谢您的关注。\n\n【同一股票前后 7 天内已有材料】（可能为空）\n（无）",
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "at": "2026-10-13T14:13:56+08:00",
+      "raw_output": "{\"is_repost\": false, \"repost_of\": null, \"stocks\": [\"301468.SZ\"], \"confidence\": 0.97, \"reason\": \"公司在互动易上的官方回复原文，7 天内没有其他同股票材料，不是转载；主体为博盈特焊（301468）。\"}\n",
+      "validation_errors": []
+    }
+  ],
+  "parsed_output": {
+    "is_repost": false,
+    "repost_of": null,
+    "stocks": [
+      "301468.SZ"
+    ],
+    "confidence": 0.97,
+    "reason": "公司在互动易上的官方回复原文，7 天内没有其他同股票材料，不是转载；主体为博盈特焊（301468）。"
+  }
+}

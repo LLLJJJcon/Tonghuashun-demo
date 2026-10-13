@@ -1,0 +1,55 @@
+{
+  "id": "run_ai2_C01",
+  "stage": "AI-2",
+  "document_id": "doc_C01",
+  "model": "claude-opus-5-5（Claude Code 子 agent 按提示词执行）",
+  "prompt_file": "prompts/ai2-claims.md",
+  "prompt_version": "v1.0",
+  "run_at": "2026-10-13T14:13:15+08:00",
+  "status": "ok",
+  "attempts": 1,
+  "input_summary": "材料 doc_C01；候选事件 ['evt_C']",
+  "input_message": "【待分析材料】\n材料 ID：doc_C01\n标题：博盈特焊：2026年6月23日投资者关系活动记录表（编号 2026-021）\n来源：博盈特焊投资者关系活动记录表（A 级，company）\n披露时间：2026-06-23T18:18:28+08:00\n摘录：3、当前越南生产基地 HRSG 生产线建设进展如何？一条HRSG 生产线对应的产能情况是怎么样的？目前越南生产基地一期的 4 条 HRSG 生产线已满产，在建的 4 条 HRSG 生产线中已有 2 条进入设备调试阶段，即将投入生产，剩下 2 条生产线将于 7 月投产；下半年公司计划在现有基础上，再建设 2 至 4 条 HRSG 生产线，预计在今年内完成建设工作。\n\n【候选事件】（同一股票、前后 30 天内；可能为空）\n- evt_C｜核心主张：博盈特焊越南生产基地二期剩余 2 条 HRSG 生产线按公司预计时间（2026 年 8 月）投产｜要素定义：{planned_date: 预计投产时间}\n  已有主张（披露时间早于本材料）：\n  （无）",
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "at": "2026-10-13T14:13:15+08:00",
+      "raw_output": "{\"claims\": [\n  {\"text\": \"公司预计越南基地在建的剩下 2 条 HRSG 生产线将于 7 月投产\",\n   \"quote\": \"剩下 2 条生产线将于 7 月投产\",\n   \"event_ref\": \"evt_C\", \"nature\": \"opinion\", \"stance\": \"support\",\n   \"fields\": {\"planned_date\": {\"value\": \"2026-07\", \"display\": \"2026 年 7 月\"}},\n   \"occurred_at\": \"2026-06-23T00:00:00+08:00\", \"occurred_precision\": \"day\",\n   \"valid_until\": \"2026-07-31T23:59:59+08:00\", \"confidence\": 0.78,\n   \"reason\": \"公司在投资者关系活动中对未来投产时间的预计，按要点 1 判为观点，有效期取 7 月末。它支持「剩余 2 条线按公司预计时间投产」，但给出的时间是 7 月而非核心主张括号中的 8 月，立场判断有一定歧义。发生时间取记录表标题中的调研日期 6 月 23 日。\"},\n  {\"text\": \"越南基地一期 4 条 HRSG 生产线已满产，在建 4 条中已有 2 条进入设备调试阶段\",\n   \"quote\": \"目前越南生产基地一期的 4 条 HRSG 生产线已满产，在建的 4 条 HRSG 生产线中已有 2 条进入设备调试阶段\",\n   \"event_ref\": \"evt_C\", \"nature\": \"fact\", \"stance\": \"neutral\",\n   \"occurred_at\": \"2026-06-23T00:00:00+08:00\", \"occurred_precision\": \"day\",\n   \"valid_until\": null, \"confidence\": 0.75,\n   \"reason\": \"公司对当前产线状态的陈述，判为事实；说的是一期产线和另外 2 条在建线，不涉及剩余 2 条线是否按期投产，判为无关。\"}\n]}\n",
+      "validation_errors": []
+    }
+  ],
+  "parsed_output": {
+    "claims": [
+      {
+        "text": "公司预计越南基地在建的剩下 2 条 HRSG 生产线将于 7 月投产",
+        "quote": "剩下 2 条生产线将于 7 月投产",
+        "event_ref": "evt_C",
+        "nature": "opinion",
+        "stance": "support",
+        "fields": {
+          "planned_date": {
+            "value": "2026-07",
+            "display": "2026 年 7 月"
+          }
+        },
+        "occurred_at": "2026-06-23T00:00:00+08:00",
+        "occurred_precision": "day",
+        "valid_until": "2026-07-31T23:59:59+08:00",
+        "confidence": 0.78,
+        "reason": "公司在投资者关系活动中对未来投产时间的预计，按要点 1 判为观点，有效期取 7 月末。它支持「剩余 2 条线按公司预计时间投产」，但给出的时间是 7 月而非核心主张括号中的 8 月，立场判断有一定歧义。发生时间取记录表标题中的调研日期 6 月 23 日。"
+      },
+      {
+        "text": "越南基地一期 4 条 HRSG 生产线已满产，在建 4 条中已有 2 条进入设备调试阶段",
+        "quote": "目前越南生产基地一期的 4 条 HRSG 生产线已满产，在建的 4 条 HRSG 生产线中已有 2 条进入设备调试阶段",
+        "event_ref": "evt_C",
+        "nature": "fact",
+        "stance": "neutral",
+        "occurred_at": "2026-06-23T00:00:00+08:00",
+        "occurred_precision": "day",
+        "valid_until": null,
+        "confidence": 0.75,
+        "reason": "公司对当前产线状态的陈述，判为事实；说的是一期产线和另外 2 条在建线，不涉及剩余 2 条线是否按期投产，判为无关。"
+      }
+    ]
+  }
+}
