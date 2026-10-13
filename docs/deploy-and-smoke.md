@@ -149,7 +149,7 @@
 | 正式地址 | https://eventtrace-demo.vercel.app （未绑定自定义域名，只有这一个正式地址） |
 | 托管平台 / 套餐 | Vercel Hobby（项目 eventtrace-demo，用 Vercel 命令行 `vercel deploy --prod` 发布） |
 | DNS 配置 | 无（使用 Vercel 默认域名） |
-| GitHub 仓库 | 【待填】 |
+| GitHub 仓库 | https://github.com/LLLJJJcon/Tonghuashun-demo |
 | 线上版本号 / 构建时间 | 0.1.0 / 2026-10-13 16:06（从线上产物中读取） |
 
 ### 国内网络实测记录
