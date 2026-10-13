@@ -429,6 +429,7 @@ export interface Rules {
   decay: { half_life_days: number; floor: number };    // 默认 30 天 / 0.2
   partial_confirm: { min_support_weight: number; min_independent_sources: number };  // 默认 0.4 / 2
   review: { confidence_threshold: number; fact_low_tiers: SourceTier[] };  // 默认 0.7 / ["C","D"]
+  data_as_of?: string;      // 数据截止时间（可选）：晚于它的检查点不进入回放，避免时钟走到未来
 }
 
 // ===== D7 默认关注列表 =====
@@ -617,7 +618,7 @@ labels: { status: Record<EventStatus,string>; nature: Record<Nature,string>; sta
 
 如果一份材料披露更早、但抓取更晚，它释放后首发来源会自然改写。这种情况不需要专门处理。
 
-**检查点**（时间控件可以停靠的时刻）：所有材料的 `fetched_at` 加上所有非空的 `valid_until`，去重后升序排列。`clock = null` 表示演示尚未开始，此时什么都不可见。
+**检查点**（时间控件可以停靠的时刻）：所有材料的 `fetched_at` 加上所有非空的 `valid_until`，去重后升序排列。设置了 `rules.data_as_of` 时，晚于它的检查点不进入回放（数据采集之后的时刻无法如实回放）。「只走本事件」的检查点不包括被判为无关的材料。`clock = null` 表示演示尚未开始，此时什么都不可见。
 
 ## B.3 主张是否有效
 

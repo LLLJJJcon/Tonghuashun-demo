@@ -32,7 +32,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <p>本产品为演示 demo，内容不构成任何投资建议。行情仅为观察到的价格变化，不代表因果关系。</p>
-      <p>运行时不调用 AI：AI 结果在数据准备阶段基于真实材料生成，并经人工校验。抓取时间为模拟值。</p>
+      <p>运行时不调用 AI：AI 结果在数据准备阶段基于真实材料生成，并经独立 AI 交叉复核（未做人工校验）。抓取时间为模拟值。</p>
       {!storageOk && <p className="footer-warn">当前浏览器不支持本地保存，刷新后演示进度会重置。</p>}
       <p className="muted">
         版本：{version || '开发版'}

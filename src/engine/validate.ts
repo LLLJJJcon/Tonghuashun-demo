@@ -337,8 +337,13 @@ export function validate(
       && isObj(r.partial_confirm) && isNum(r.partial_confirm.min_support_weight) && isNum(r.partial_confirm.min_independent_sources)
       && isObj(r.review) && isNum(r.review.confidence_threshold)
       && Array.isArray(r.review.fact_low_tiers) && r.review.fact_low_tiers.every((t) => inEnum(t, TIERS));
-    if (ok) rules = clone(r) as unknown as Rules;
-    else err(FILES.rules.file, present ? '规则参数缺少必填字段或格式非法，已使用默认参数' : '文件缺失，已使用默认参数');
+    if (ok) {
+      rules = clone(r) as unknown as Rules;
+      if (rules.data_as_of !== undefined && !isIsoTime(rules.data_as_of)) {
+        issues.push({ level: 'warning', file: FILES.rules.file, message: 'data_as_of 不是合法时间，已忽略' });
+        delete rules.data_as_of;
+      }
+    } else err(FILES.rules.file, present ? '规则参数缺少必填字段或格式非法，已使用默认参数' : '文件缺失，已使用默认参数');
   }
 
   // ---------- D10 行情（缺失不报错） ----------

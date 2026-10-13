@@ -14,12 +14,17 @@ function uniqSorted(times: string[]): string[] {
   return [...byMs.entries()].sort((a, b) => a[0] - b[0]).map(([, t]) => t);
 }
 
-/** 检查点 = 所有材料的 fetched_at + 所有非空的 valid_until，去重后升序 */
-export function computeCheckpoints(input: { documents: Document[]; claims: Claim[] }): string[] {
-  return uniqSorted([
+/**
+ * 检查点 = 所有材料的 fetched_at + 所有非空的 valid_until，去重后升序。
+ * 给出数据截止时间 dataAsOf 时，晚于它的检查点不进入回放（数据采集之后的时刻无法如实回放）。
+ */
+export function computeCheckpoints(input: { documents: Document[]; claims: Claim[] }, dataAsOf?: string): string[] {
+  const all = uniqSorted([
     ...input.documents.map((d) => d.fetched_at),
     ...input.claims.flatMap((c) => (c.valid_until ? [c.valid_until] : [])),
   ]);
+  const cap = dataAsOf ? toMs(dataAsOf) : NaN;
+  return Number.isNaN(cap) ? all : all.filter((t) => toMs(t) <= cap);
 }
 
 /**
@@ -47,14 +52,13 @@ export function latestCheckpoint(checkpoints: string[]): string | null {
 }
 
 /**
- * 只走本事件时使用的检查点：本事件材料的 fetched_at、本事件主张的 valid_until，
- * 以及候选事件包含本事件的「无关」材料的 fetched_at（它们出现在本事件时间线里）。
+ * 只走本事件时使用的检查点：本事件材料的 fetched_at、本事件主张的 valid_until。
+ * 不含被判为无关的材料：否则会停在本事件尚无可见材料的时刻。
  */
 export function eventCheckpoints(input: EngineInput, eventId: string): string[] {
-  const docs = input.documents.filter((d) =>
-    d.match.event_id === eventId || (d.match.decision === 'unrelated' && d.match.candidate_event_ids.includes(eventId)));
+  const docs = input.documents.filter((d) => d.match.event_id === eventId && d.match.decision !== 'unrelated');
   const claims = input.claims.filter((c) => c.event_id === eventId);
-  return computeCheckpoints({ documents: docs, claims });
+  return computeCheckpoints({ documents: docs, claims }, input.rules.data_as_of);
 }
 
 /**

@@ -157,7 +157,7 @@ describe('边界', () => {
     expect(prevCheckpoint(cps, '2026-01-01T00:00:00+08:00')).toBe(cps[cps.length - 1]);
     expect(latestCheckpoint(cps)).toBe(LATEST);
     const a = eventCheckpoints(input(null), 'evt_A');
-    expect(a).toEqual(['A01', 'A02', 'A03', 'A06', 'A04', 'A05'].map(fetched));
+    expect(a).toEqual(['A01', 'A02', 'A03', 'A04', 'A05'].map(fetched)); // 不含无关材料 A06
     expect(eventCheckpoints(input(null), 'evt_C')).toEqual([fetched('C01'), fetched('C02'), LATEST]);
   });
 });

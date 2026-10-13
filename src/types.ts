@@ -124,6 +124,7 @@ export interface Rules {
   decay: { half_life_days: number; floor: number };    // 默认 30 天 / 0.2
   partial_confirm: { min_support_weight: number; min_independent_sources: number };  // 默认 0.4 / 2
   review: { confidence_threshold: number; fact_low_tiers: SourceTier[] };  // 默认 0.7 / ["C","D"]
+  data_as_of?: string;      // 数据截止时间（可选）：晚于它的检查点（例如更远的有效期）不进入回放，避免时钟走到未来
 }
 
 // ===== D7 默认关注列表 =====

@@ -16,7 +16,7 @@ import { evaluateClaims } from './weight';
 export function derive(input: EngineInput): DeriveOutput {
   const issues: DataIssue[] = [];
   const ctx = buildContext(input, issues);
-  const checkpoints = computeCheckpoints({ documents: [...ctx.docs.values()], claims: ctx.claims });
+  const checkpoints = computeCheckpoints({ documents: [...ctx.docs.values()], claims: ctx.claims }, input.rules.data_as_of);
   const E = effectiveTime(checkpoints, input.clock);
   if (E === null) return { clock: input.clock, checkpoints, events: [], notifications: [], review_queue: [], issues };
 
