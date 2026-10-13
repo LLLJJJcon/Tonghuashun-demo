@@ -1,4 +1,10 @@
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { App } from './ui/App';
+import './ui/styles.css';
 
-// 占位入口，由 AGENT-3 替换为真正的应用
-createRoot(document.getElementById('root')!).render(<p>EventTrace 正在建设中</p>);
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
