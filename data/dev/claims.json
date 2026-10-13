@@ -1,0 +1,293 @@
+[
+  {
+    "id": "doc_A01_c1",
+    "document_id": "doc_A01",
+    "event_id": "evt_A",
+    "text": "网传示例科技将收购样本材料",
+    "quote": "网传示例科技将收购样本材料",
+    "nature": "rumor",
+    "stance": "support",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A01",
+      "confidence": 0.9,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_A02_c1",
+    "document_id": "doc_A02",
+    "event_id": "evt_A",
+    "text": "示例科技正洽谈收购样本材料控股权，对价约 10 亿元",
+    "quote": "据悉，示例科技正洽谈收购样本材料控股权，对价约 10 亿元",
+    "nature": "speculation",
+    "stance": "support",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A02",
+      "confidence": 0.85,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "fields": {
+      "price": {
+        "value": 1000000000,
+        "display": "约 10 亿元"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_A03_c1",
+    "document_id": "doc_A03",
+    "event_id": "evt_A",
+    "text": "示例科技正洽谈收购样本材料控股权，对价约 10 亿元",
+    "quote": "据悉，示例科技正洽谈收购样本材料控股权，对价约 10 亿元",
+    "nature": "speculation",
+    "stance": "support",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A03",
+      "confidence": 0.9,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "fields": {
+      "price": {
+        "value": 1000000000,
+        "display": "约 10 亿元"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_A04_c1",
+    "document_id": "doc_A04",
+    "event_id": "evt_A",
+    "text": "收购对价或为 8 亿元",
+    "quote": "接近公司人士称，示例科技收购样本材料的对价或为 8 亿元",
+    "nature": "speculation",
+    "stance": "support",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A04",
+      "confidence": 0.62,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "fields": {
+      "price": {
+        "value": 800000000,
+        "display": "8 亿元"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_A05_c1",
+    "document_id": "doc_A05",
+    "event_id": "evt_A",
+    "text": "公司不存在应披露未披露的重大收购事项",
+    "quote": "经核实，公司目前不存在应披露未披露的重大收购事项",
+    "nature": "fact",
+    "stance": "oppose",
+    "occurred_at": "2025-03-05T00:00:00+08:00",
+    "occurred_precision": "day",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_A05",
+      "confidence": 0.9,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_B01_c1",
+    "document_id": "doc_B01",
+    "event_id": "evt_B",
+    "text": "预计 2024 年归母净利润 1.2–1.5 亿元",
+    "quote": "预计 2024 年度归母净利润 1.2 亿元至 1.5 亿元",
+    "nature": "fact",
+    "stance": "support",
+    "occurred_at": "2024-01-01T00:00:00+08:00",
+    "occurred_precision": "range",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B01",
+      "confidence": 0.9,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "occurred_range": [
+      "2024-01-01T00:00:00+08:00",
+      "2024-12-31T23:59:59+08:00"
+    ],
+    "fields": {
+      "profit": {
+        "value": "120000000-150000000",
+        "display": "1.2–1.5 亿元"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_B02_c1",
+    "document_id": "doc_B02",
+    "event_id": "evt_B",
+    "text": "2024 年归母净利润 1.38 亿元",
+    "quote": "2024 年度归母净利润 1.38 亿元",
+    "nature": "fact",
+    "stance": "support",
+    "occurred_at": "2024-01-01T00:00:00+08:00",
+    "occurred_precision": "range",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B02",
+      "confidence": 0.9,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "occurred_range": [
+      "2024-01-01T00:00:00+08:00",
+      "2024-12-31T23:59:59+08:00"
+    ],
+    "revision": {
+      "type": "update",
+      "targets": [
+        "doc_B01_c1"
+      ]
+    },
+    "fields": {
+      "profit": {
+        "value": 138000000,
+        "display": "1.38 亿元"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_B03_c1",
+    "document_id": "doc_B03",
+    "event_id": "evt_B",
+    "text": "更正后 2024 年归母净利润 1.32 亿元",
+    "quote": "更正后 2024 年度归母净利润为 1.32 亿元",
+    "nature": "fact",
+    "stance": "support",
+    "occurred_at": "2024-01-01T00:00:00+08:00",
+    "occurred_precision": "range",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_B03",
+      "confidence": 0.9,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "occurred_range": [
+      "2024-01-01T00:00:00+08:00",
+      "2024-12-31T23:59:59+08:00"
+    ],
+    "revision": {
+      "type": "correct",
+      "targets": [
+        "doc_B02_c1"
+      ]
+    },
+    "fields": {
+      "profit": {
+        "value": 132000000,
+        "display": "1.32 亿元"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_C01_c1",
+    "document_id": "doc_C01",
+    "event_id": "evt_C",
+    "text": "公司预计二期项目 6 月投产",
+    "quote": "公司预计二期项目 6 月投产",
+    "nature": "opinion",
+    "stance": "support",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": "2025-06-30T23:59:59+08:00",
+    "ai": {
+      "run_id": "run_ai2_C01",
+      "confidence": 0.9,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_C02_c1",
+    "document_id": "doc_C02",
+    "event_id": "evt_C",
+    "text": "二期项目有望如期投产",
+    "quote": "据悉二期项目进展顺利，有望如期投产",
+    "nature": "speculation",
+    "stance": "support",
+    "occurred_at": null,
+    "occurred_precision": "unknown",
+    "valid_until": "2025-06-30T23:59:59+08:00",
+    "ai": {
+      "run_id": "run_ai2_C02",
+      "confidence": 0.9,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_D01_c1",
+    "document_id": "doc_D01",
+    "event_id": "evt_D",
+    "text": "示例科技已完成新一代产品发布",
+    "quote": "示例科技已完成新一代产品发布",
+    "nature": "fact",
+    "stance": "support",
+    "occurred_at": "2025-03-04T10:00:00+08:00",
+    "occurred_precision": "datetime",
+    "valid_until": null,
+    "ai": {
+      "run_id": "run_ai2_D01",
+      "confidence": 0.75,
+      "reason": "（开发样例）虚构的 AI 理由"
+    },
+    "prep_check": {
+      "status": "passed"
+    },
+    "is_dev_sample": true
+  }
+]

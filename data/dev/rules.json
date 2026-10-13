@@ -1,0 +1,32 @@
+{
+  "version": "dev-1",
+  "tier_score": {
+    "S": 1,
+    "A": 0.8,
+    "B": 0.6,
+    "C": 0.4,
+    "D": 0.2
+  },
+  "nature_coef": {
+    "fact": 1,
+    "opinion": 0.6,
+    "speculation": 0.4,
+    "rumor": 0.2
+  },
+  "decay": {
+    "half_life_days": 30,
+    "floor": 0.2
+  },
+  "partial_confirm": {
+    "min_support_weight": 0.4,
+    "min_independent_sources": 2
+  },
+  "review": {
+    "confidence_threshold": 0.7,
+    "fact_low_tiers": [
+      "C",
+      "D"
+    ]
+  },
+  "is_dev_sample": true
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "src_dev_exchange",
+    "name": "示例证券交易所",
+    "type": "exchange",
+    "tier": "S",
+    "tier_reason": "（开发样例）交易所公告",
+    "is_dev_sample": true
+  },
+  {
+    "id": "src_dev_irm",
+    "name": "示例互动平台",
+    "type": "company",
+    "tier": "A",
+    "tier_reason": "（开发样例）上市公司官方互动问答",
+    "is_dev_sample": true
+  },
+  {
+    "id": "src_dev_media1",
+    "name": "示例财经",
+    "type": "media",
+    "tier": "B",
+    "tier_reason": "（开发样例）主流财经媒体",
+    "is_dev_sample": true
+  },
+  {
+    "id": "src_dev_media2",
+    "name": "样本日报",
+    "type": "media",
+    "tier": "B",
+    "tier_reason": "（开发样例）主流财经媒体",
+    "is_dev_sample": true
+  },
+  {
+    "id": "src_dev_media3",
+    "name": "演示证券报",
+    "type": "media",
+    "tier": "B",
+    "tier_reason": "（开发样例）主流财经媒体",
+    "is_dev_sample": true
+  },
+  {
+    "id": "src_dev_social",
+    "name": "示例论坛",
+    "type": "social",
+    "tier": "D",
+    "tier_reason": "（开发样例）论坛匿名帖",
+    "is_dev_sample": true
+  },
+  {
+    "id": "src_dev_social2",
+    "name": "示例自媒体",
+    "type": "social",
+    "tier": "D",
+    "tier_reason": "（开发样例）自媒体账号",
+    "is_dev_sample": true
+  }
+]

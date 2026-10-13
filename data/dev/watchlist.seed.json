@@ -1,0 +1,17 @@
+{
+  "stocks": [
+    {
+      "code": "DEV001.SZ",
+      "name": "示例科技"
+    },
+    {
+      "code": "DEV002.SZ",
+      "name": "样本材料"
+    },
+    {
+      "code": "DEV003.SH",
+      "name": "演示新能源"
+    }
+  ],
+  "is_dev_sample": true
+}

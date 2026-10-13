@@ -1,0 +1,385 @@
+[
+  {
+    "id": "doc_A01",
+    "source_id": "src_dev_social",
+    "title": "网传示例科技将收购样本材料",
+    "url": "https://example.com/dev/A01",
+    "excerpt": "网传示例科技将收购样本材料，消息未经证实。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-03-03T20:10:00+08:00",
+    "fetched_at": "2025-03-03T22:10:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV001.SZ",
+      "DEV002.SZ"
+    ],
+    "match": {
+      "decision": "new",
+      "event_id": "evt_A",
+      "candidate_event_ids": [],
+      "ai": {
+        "run_id": "run_ai3_A01",
+        "confidence": 0.9,
+        "reason": "（开发样例）首次出现的收购传闻，新建事件"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_A02",
+    "source_id": "src_dev_media1",
+    "title": "示例科技正洽谈收购样本材料",
+    "url": "https://example.com/dev/A02",
+    "excerpt": "据悉，示例科技正洽谈收购样本材料控股权，对价约 10 亿元。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-03-04T08:00:00+08:00",
+    "fetched_at": "2025-03-04T08:20:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV001.SZ",
+      "DEV002.SZ"
+    ],
+    "match": {
+      "decision": "same",
+      "event_id": "evt_A",
+      "candidate_event_ids": [
+        "evt_A"
+      ],
+      "ai": {
+        "run_id": "run_ai3_A02",
+        "confidence": 0.9,
+        "reason": "（开发样例）同一收购事项"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_A03",
+    "source_id": "src_dev_media2",
+    "title": "转载：示例科技正洽谈收购样本材料",
+    "url": "https://example.com/dev/A03",
+    "excerpt": "据悉，示例科技正洽谈收购样本材料控股权，对价约 10 亿元。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-03-04T09:00:00+08:00",
+    "fetched_at": "2025-03-04T09:30:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": "doc_A02",
+    "stocks": [
+      "DEV001.SZ",
+      "DEV002.SZ"
+    ],
+    "match": {
+      "decision": "same",
+      "event_id": "evt_A",
+      "candidate_event_ids": [
+        "evt_A"
+      ],
+      "ai": {
+        "run_id": "run_ai3_A03",
+        "confidence": 0.9,
+        "reason": "（开发样例）转载 A02，同一收购事项"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_A04",
+    "source_id": "src_dev_media3",
+    "title": "接近公司人士称收购对价或为 8 亿元",
+    "url": "https://example.com/dev/A04",
+    "excerpt": "接近公司人士称，示例科技收购样本材料的对价或为 8 亿元。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-03-04T14:00:00+08:00",
+    "fetched_at": "2025-03-04T14:30:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV001.SZ",
+      "DEV002.SZ"
+    ],
+    "match": {
+      "decision": "same",
+      "event_id": "evt_A",
+      "candidate_event_ids": [
+        "evt_A"
+      ],
+      "ai": {
+        "run_id": "run_ai3_A04",
+        "confidence": 0.9,
+        "reason": "（开发样例）同一收购事项"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_A05",
+    "source_id": "src_dev_exchange",
+    "title": "示例科技澄清公告",
+    "url": "https://example.com/dev/A05",
+    "excerpt": "经核实，公司目前不存在应披露未披露的重大收购事项。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-03-05T19:30:00+08:00",
+    "fetched_at": "2025-03-05T19:40:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV001.SZ",
+      "DEV002.SZ"
+    ],
+    "match": {
+      "decision": "same",
+      "event_id": "evt_A",
+      "candidate_event_ids": [
+        "evt_A"
+      ],
+      "ai": {
+        "run_id": "run_ai3_A05",
+        "confidence": 0.9,
+        "reason": "（开发样例）针对收购传闻的澄清"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_A06",
+    "source_id": "src_dev_social2",
+    "title": "示例科技董事长出席行业论坛",
+    "url": "https://example.com/dev/A06",
+    "excerpt": "示例科技董事长今日出席行业论坛并发表演讲。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-03-04T10:00:00+08:00",
+    "fetched_at": "2025-03-04T11:00:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV001.SZ"
+    ],
+    "match": {
+      "decision": "unrelated",
+      "event_id": null,
+      "candidate_event_ids": [
+        "evt_A"
+      ],
+      "ai": {
+        "run_id": "run_ai3_A06",
+        "confidence": 0.88,
+        "reason": "（开发样例）同公司但与收购无关"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_B01",
+    "source_id": "src_dev_exchange",
+    "title": "样本材料 2024 年度业绩预告",
+    "url": "https://example.com/dev/B01",
+    "excerpt": "预计 2024 年度归母净利润 1.2 亿元至 1.5 亿元。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-01-20T18:00:00+08:00",
+    "fetched_at": "2025-01-20T18:20:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV002.SZ"
+    ],
+    "match": {
+      "decision": "new",
+      "event_id": "evt_B",
+      "candidate_event_ids": [],
+      "ai": {
+        "run_id": "run_ai3_B01",
+        "confidence": 0.9,
+        "reason": "（开发样例）年度业绩，新建事件"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_B02",
+    "source_id": "src_dev_exchange",
+    "title": "样本材料 2024 年度业绩快报",
+    "url": "https://example.com/dev/B02",
+    "excerpt": "2024 年度归母净利润 1.38 亿元。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-02-25T18:00:00+08:00",
+    "fetched_at": "2025-02-25T18:20:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV002.SZ"
+    ],
+    "match": {
+      "decision": "same",
+      "event_id": "evt_B",
+      "candidate_event_ids": [
+        "evt_B"
+      ],
+      "ai": {
+        "run_id": "run_ai3_B02",
+        "confidence": 0.9,
+        "reason": "（开发样例）同一年度业绩"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_B03",
+    "source_id": "src_dev_exchange",
+    "title": "样本材料关于 2024 年度业绩快报的更正公告",
+    "url": "https://example.com/dev/B03",
+    "excerpt": "更正后 2024 年度归母净利润为 1.32 亿元。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-03-10T18:00:00+08:00",
+    "fetched_at": "2025-03-10T18:20:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV002.SZ"
+    ],
+    "match": {
+      "decision": "same",
+      "event_id": "evt_B",
+      "candidate_event_ids": [
+        "evt_B"
+      ],
+      "ai": {
+        "run_id": "run_ai3_B03",
+        "confidence": 0.9,
+        "reason": "（开发样例）同一年度业绩的更正"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_C01",
+    "source_id": "src_dev_irm",
+    "title": "互动平台问答：二期项目进度",
+    "url": "https://example.com/dev/C01",
+    "excerpt": "公司预计二期项目 6 月投产。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-02-10T15:00:00+08:00",
+    "fetched_at": "2025-02-10T15:20:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV003.SH"
+    ],
+    "match": {
+      "decision": "new",
+      "event_id": "evt_C",
+      "candidate_event_ids": [],
+      "ai": {
+        "run_id": "run_ai3_C01",
+        "confidence": 0.9,
+        "reason": "（开发样例）项目投产预期，新建事件"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_C02",
+    "source_id": "src_dev_media1",
+    "title": "演示新能源二期项目进展顺利",
+    "url": "https://example.com/dev/C02",
+    "excerpt": "据悉二期项目进展顺利，有望如期投产。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-04-02T09:00:00+08:00",
+    "fetched_at": "2025-04-02T09:20:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV003.SH"
+    ],
+    "match": {
+      "decision": "same",
+      "event_id": "evt_C",
+      "candidate_event_ids": [
+        "evt_C"
+      ],
+      "ai": {
+        "run_id": "run_ai3_C02",
+        "confidence": 0.9,
+        "reason": "（开发样例）同一项目"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  },
+  {
+    "id": "doc_D01",
+    "source_id": "src_dev_social",
+    "title": "示例科技已完成新一代产品发布",
+    "url": "https://example.com/dev/D01",
+    "excerpt": "示例科技已完成新一代产品发布。（开发样例，虚构）",
+    "data_origin": "other",
+    "published_at": "2025-03-04T12:00:00+08:00",
+    "fetched_at": "2025-03-04T12:20:00+08:00",
+    "fetched_at_simulated": true,
+    "source_updated_at": null,
+    "repost_of": null,
+    "stocks": [
+      "DEV001.SZ"
+    ],
+    "match": {
+      "decision": "related",
+      "event_id": "evt_D",
+      "candidate_event_ids": [
+        "evt_A"
+      ],
+      "ai": {
+        "run_id": "run_ai3_D01",
+        "confidence": 0.9,
+        "reason": "同公司同期，但事项为产品发布而非收购"
+      },
+      "prep_check": {
+        "status": "passed"
+      }
+    },
+    "is_dev_sample": true
+  }
+]

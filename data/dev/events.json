@@ -1,0 +1,81 @@
+[
+  {
+    "id": "evt_A",
+    "title": "示例科技拟收购样本材料",
+    "type": "mna",
+    "core_proposition": "示例科技拟收购样本材料控股权",
+    "stocks": [
+      {
+        "code": "DEV001.SZ",
+        "name": "示例科技",
+        "relation": "subject"
+      },
+      {
+        "code": "DEV002.SZ",
+        "name": "样本材料",
+        "relation": "counterparty"
+      }
+    ],
+    "fields": [
+      {
+        "key": "price",
+        "label": "交易对价"
+      }
+    ],
+    "is_dev_sample": true
+  },
+  {
+    "id": "evt_B",
+    "title": "样本材料 2024 年度业绩",
+    "type": "earnings",
+    "core_proposition": "样本材料 2024 年归母净利润",
+    "stocks": [
+      {
+        "code": "DEV002.SZ",
+        "name": "样本材料",
+        "relation": "subject"
+      }
+    ],
+    "fields": [
+      {
+        "key": "profit",
+        "label": "归母净利润"
+      }
+    ],
+    "is_dev_sample": true
+  },
+  {
+    "id": "evt_C",
+    "title": "演示新能源二期项目投产",
+    "type": "project",
+    "core_proposition": "演示新能源二期项目于 2025 年 6 月投产",
+    "stocks": [
+      {
+        "code": "DEV003.SH",
+        "name": "演示新能源",
+        "relation": "subject"
+      }
+    ],
+    "fields": [],
+    "is_dev_sample": true
+  },
+  {
+    "id": "evt_D",
+    "title": "示例科技发布新产品",
+    "type": "other",
+    "core_proposition": "示例科技已完成新一代产品发布",
+    "stocks": [
+      {
+        "code": "DEV001.SZ",
+        "name": "示例科技",
+        "relation": "subject"
+      }
+    ],
+    "fields": [],
+    "is_counter_example": true,
+    "related_event_ids": [
+      "evt_A"
+    ],
+    "is_dev_sample": true
+  }
+]
