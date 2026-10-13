@@ -1,0 +1,17 @@
+{
+  "labeler": "独立 AI 复核（claude-opus-5-5 子 agent，未查看第一轮 AI 结果）",
+  "human_reviewed": false,
+  "run_at": "2026-10-13T15:15:19+08:00",
+  "method": "依据标注表给出的判定口径和 AGENT-1 文档 1.5 节术语表，逐条按主张本身的信息来源和措辞判断性质，并对照参照核心主张判断立场；对模糊条目查阅 data/raw 原文上下文（如博盈特焊 IR 纪要、证券日报和时代周报报道），对材料与事件判断主要事项是否为同一件事；拿不准之处在 reason 中写明备选判断。",
+  "files_read": [
+    "data/labels/labeling-sheet.md",
+    "agent-docs/AGENT-1-数据准备.md（第 93–142 行，即 1.5 术语表和紧随其后的 1.6 目录结构片段；另外，grep 定位「1.5」时输出中带出了第 260、444、859、886 行的单行片段）",
+    "data/raw/ir/301468_IR_20260623_diff.txt",
+    "data/raw/ir/301468_IR_20260623_updated_0625.txt（grep 片段）",
+    "data/raw/ir/301468_IR_20260625.txt（grep 片段）",
+    "data/raw/media/stockstar_sdzb.txt（grep 片段，时代周报 A10）",
+    "data/raw/media/ths_679622411.txt（grep 检索，证券日报 A12，未命中回购或控股权相关词）",
+    "data/raw/media/*.txt（仅用 grep -l 检索「业绩说明会」「量价齐升」定位文件）",
+    "data/raw 目录文件清单（find）"
+  ]
+}

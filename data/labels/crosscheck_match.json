@@ -1,0 +1,14 @@
+[
+  { "document_id": "doc_B03", "event_id": "evt_B", "decision": "related", "reason": "材料的主要事项是子公司诉讼终审结果，不是 2025 年利润本身；但明确说明将冲回预计负债，并更正已披露的业绩预告和快报，与利润事件有直接交叉。拿不准：因为它是利润更正的触发公告，也可以判为同一事件（same）。" },
+  { "document_id": "doc_B05", "event_id": "evt_B", "decision": "same", "reason": "报道德林海更正后的 2025 年归母净利润（10,038.70 万元，上年同期为 -8,614.88 万元），主要事项就是该年度净利润的扭亏为盈。" },
+  { "document_id": "doc_C04", "event_id": "evt_C", "decision": "same", "reason": "转述公司回复：二期剩余 2 条 HRSG 线在安装中，预计 8 月投产，与核心主张是同一件事。" },
+  { "document_id": "doc_A12", "event_id": "evt_A", "decision": "unrelated", "reason": "材料讲 9 月 4 日的半年度业绩说明会和上半年业绩，原文没有提到收购或控股权（已在原文中检索确认）；虽然是同一公司、时间相近，但没有内容交叉。拿不准：如果把「同公司同期」本身视为相关，也可以判为相关但不同（related）。" },
+  { "document_id": "doc_A12", "event_id": "evt_D", "decision": "unrelated", "reason": "材料只讲半年度业绩，原文没有提到回购（已检索确认）；与回购事件没有内容交叉。拿不准点同上，宽松口径下也可以判为相关但不同。" },
+  { "document_id": "doc_D01", "event_id": "evt_A", "decision": "unrelated", "reason": "首次回购公告的主要事项是用于股权激励或员工持股的回购，与控股权洽谈不是一件事，公告也没有提及控股权。拿不准：两者同公司、相隔 3 天，且有媒体（A13）把两者并列报道，按「同公司同期」的宽松口径也可以判为相关但不同。" },
+  { "document_id": "doc_D02", "event_id": "evt_A", "decision": "unrelated", "reason": "回购进展公告只披露累计回购数据，与控股权洽谈没有内容交叉。拿不准点同 D01，宽松口径下也可以判为相关但不同。" },
+  { "document_id": "doc_D02", "event_id": "evt_D", "decision": "same", "reason": "正式披露截至 9 月 30 日的累计回购进展，主要事项就是盛和资源正在实施的股份回购。" },
+  { "document_id": "doc_A13", "event_id": "evt_A", "decision": "same", "reason": "标题和主体是盛和资源否认控股权被收购，主要事项就是控股权洽谈事件（立场为否认）。" },
+  { "document_id": "doc_A13", "event_id": "evt_D", "decision": "related", "reason": "文章的主要事项是否认被收购，回购只作为次要内容提及（9 月 15 日首次回购），所以有交叉，但不是同一件事。" },
+  { "document_id": "doc_A10", "event_id": "evt_A", "decision": "same", "reason": "围绕澄清控股权易主传闻展开，包括澄清公告、中国稀土证券部的回应，主要事项就是该收购洽谈事件。" },
+  { "document_id": "doc_A03", "event_id": "evt_A", "decision": "same", "reason": "转述路透独家报道：中国稀土集团正与盛和资源谈判，并希望获得控股权，与核心主张完全一致。" }
+]

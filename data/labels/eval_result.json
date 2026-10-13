@@ -1,0 +1,108 @@
+{
+  "note": "复核方为独立 AI（未查看第一轮结果），以下为两轮 AI 判断的一致率，不是相对人工标准答案的准确率；本项目未做人工校验。",
+  "generated_at": "2026-10-13T07:16:33.371Z",
+  "crosscheck_meta": {
+    "labeler": "独立 AI 复核（claude-opus-5-5 子 agent，未查看第一轮 AI 结果）",
+    "human_reviewed": false,
+    "run_at": "2026-10-13T15:15:19+08:00",
+    "method": "依据标注表给出的判定口径和 AGENT-1 文档 1.5 节术语表，逐条按主张本身的信息来源和措辞判断性质，并对照参照核心主张判断立场；对模糊条目查阅 data/raw 原文上下文（如博盈特焊 IR 纪要、证券日报和时代周报报道），对材料与事件判断主要事项是否为同一件事；拿不准之处在 reason 中写明备选判断。",
+    "files_read": [
+      "data/labels/labeling-sheet.md",
+      "agent-docs/AGENT-1-数据准备.md（第 93–142 行，即 1.5 术语表和紧随其后的 1.6 目录结构片段；另外，grep 定位「1.5」时输出中带出了第 260、444、859、886 行的单行片段）",
+      "data/raw/ir/301468_IR_20260623_diff.txt",
+      "data/raw/ir/301468_IR_20260623_updated_0625.txt（grep 片段）",
+      "data/raw/ir/301468_IR_20260625.txt（grep 片段）",
+      "data/raw/media/stockstar_sdzb.txt（grep 片段，时代周报 A10）",
+      "data/raw/media/ths_679622411.txt（grep 检索，证券日报 A12，未命中回购或控股权相关词）",
+      "data/raw/media/*.txt（仅用 grep -l 检索「业绩说明会」「量价齐升」定位文件）",
+      "data/raw 目录文件清单（find）"
+    ]
+  },
+  "claims": {
+    "total": 30,
+    "nature_agreement_pct": 96.7,
+    "stance_agreement_pct": 100,
+    "nature_confusion_rows_first_pass_cols_crosscheck": {
+      "fact": {
+        "fact": 18,
+        "opinion": 0,
+        "speculation": 0,
+        "rumor": 0
+      },
+      "opinion": {
+        "fact": 1,
+        "opinion": 4,
+        "speculation": 0,
+        "rumor": 0
+      },
+      "speculation": {
+        "fact": 0,
+        "opinion": 0,
+        "speculation": 6,
+        "rumor": 0
+      },
+      "rumor": {
+        "fact": 0,
+        "opinion": 0,
+        "speculation": 0,
+        "rumor": 1
+      }
+    }
+  },
+  "match": {
+    "total": 12,
+    "agreement_pct": 83.3
+  },
+  "disagreements": {
+    "claims": [
+      {
+        "claim_id": "doc_B03_c2",
+        "quote": "公司将在编制2025 年年报时，依据终审判决结果及相关会计准则，将 2024 年度计提的 4,807.95万元预计负债予以冲回，公司前期披露的公司《2025 年度业绩预盈公告》《2025年度业绩快报公告》中的相关财务数据将进行更正",
+        "first_pass": {
+          "nature": "opinion",
+          "stance": "support",
+          "confidence": 0.6,
+          "reason": "这是公司对将来会计处理和更正的表态（「将…予以冲回」「将进行更正」），按要点 1 判为观点，有效期按年报法定披露截止日 4 月 30 日推定（原文只写「编制 2025 年年报时」）。冲回预计负债会增加 2025 年利润，倾向支持扭亏为盈；但它没有给出新数值，也不是正式更正，所以不填修订。性质（事实/观点）、是否算修订、立场都有歧义，置信度较低。"
+        },
+        "crosscheck": {
+          "nature": "fact",
+          "stance": "support",
+          "reason": "公司在正式公告中宣布既定的会计处理：冲回 4,807.95 万元预计负债，并将更正前期数据。冲回会增加 2025 年利润，强化扭亏结论。拿不准：用了「将」，是面向未来的安排，也可以算公司预计（opinion）；但触发条件（终审判决）已经发生，处理方式已经确定，所以判为事实。"
+        }
+      }
+    ],
+    "match": [
+      {
+        "document_id": "doc_B03",
+        "event_id": "evt_B",
+        "first_pass": {
+          "decision": "same",
+          "event_id": "evt_B",
+          "normalized": "same",
+          "confidence": 0.62,
+          "reason": "标题和大部分篇幅是子公司诉讼终审结果，主要事项更像一个独立的诉讼事件；但它明确写出前期业绩预盈公告、业绩快报中的财务数据将进行更正，直接影响 evt_B。候选中没有诉讼事件，按对业绩的影响并入 evt_B，归属有歧义。"
+        },
+        "crosscheck": {
+          "decision": "related",
+          "reason": "材料的主要事项是子公司诉讼终审结果，不是 2025 年利润本身；但明确说明将冲回预计负债，并更正已披露的业绩预告和快报，与利润事件有直接交叉。拿不准：因为它是利润更正的触发公告，也可以判为同一事件（same）。"
+        }
+      },
+      {
+        "document_id": "doc_A13",
+        "event_id": "evt_A",
+        "first_pass": {
+          "decision": "related",
+          "event_id": "evt_A",
+          "normalized": "related",
+          "confidence": 0.72,
+          "reason": "标题和首要内容是盛和资源否认控股权被收购，主要事项归入 evt_A；但正文另有一段写 9 月 15 日首次回购（c2 针对 evt_D），与回购事件 evt_D 内容交叉，标为相关但不合并。一篇材料覆盖两个事件，归属有一定歧义，c2 不应计入 evt_A。"
+        },
+        "crosscheck": {
+          "decision": "same",
+          "reason": "标题和主体是盛和资源否认控股权被收购，主要事项就是控股权洽谈事件（立场为否认）。"
+        }
+      }
+    ]
+  },
+  "missing_ids": []
+}
