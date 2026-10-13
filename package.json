@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "npm run prebuild-check && tsc --noEmit && vite build",
+    "prebuild-check": "tsx scripts/prebuild-check.ts",
+    "check:data": "tsx scripts/prebuild-check.ts --data-only",
     "preview": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
